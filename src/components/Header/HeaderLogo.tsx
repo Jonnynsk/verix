@@ -8,7 +8,10 @@ type HeaderLogoProps = {
   variant?: "header" | "footer";
 };
 
-export function HeaderLogo({ href = "/", variant = "header" }: HeaderLogoProps) {
+export function HeaderLogo({
+  href = "/",
+  variant = "header",
+}: HeaderLogoProps) {
   const isFooter = variant === "footer";
 
   return (
