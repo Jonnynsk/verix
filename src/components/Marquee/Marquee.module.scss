@@ -1,0 +1,78 @@
+@use "../../styles" as *;
+
+.marquee {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: $color-slate-900;
+  border-top: 2px solid $color-slate-800;
+  border-bottom: 2px solid $color-slate-800;
+  padding-block: 18px;
+
+  &__track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: max-content;
+    will-change: transform;
+    animation: verix-marquee-scroll 28s linear infinite;
+  }
+
+  &__group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: $space-11;
+    padding-right: $space-11;
+
+    @media (min-width: $bp-md) {
+      padding-right: 38px;
+    }
+  }
+
+  &__segment {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: $font-weight-regular;
+    color: $color-white-90;
+    white-space: nowrap;
+
+    svg {
+      flex-shrink: 0;
+      opacity: 0.9;
+      color: $color-cyan-400;
+    }
+  }
+
+  &__sep {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-marquee;
+    line-height: 1;
+    color: $color-cyan-400;
+    user-select: none;
+  }
+}
+
+@keyframes verix-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
