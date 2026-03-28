@@ -1,0 +1,51 @@
+@use "../../styles" as *;
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $header-logo-mark-size;
+  height: $header-logo-mark-size;
+  border-radius: $radius-lg;
+  background: $gradient-primary-cta;
+  box-shadow: $shadow-glow-cyan-strong;
+  font-size: $font-size-lead;
+  line-height: $line-height-lead;
+  letter-spacing: $tracking-tight-lg;
+  font-weight: $font-weight-regular;
+  color: $color-white;
+}
+
+.wordmark {
+  font-size: $font-size-lead;
+  line-height: 1.33;
+  letter-spacing: -0.029em;
+  font-weight: $font-weight-regular;
+  color: $color-slate-900;
+
+  @media (min-width: $bp-lg) {
+    font-size: $font-size-brand-lg;
+    line-height: $line-height-brand-lg;
+  }
+}
+
+.mark_footer {
+  width: $space-10;
+  height: $space-10;
+}
+
+.wordmark_footer {
+  color: $color-white;
+  font-size: $font-size-brand-lg;
+  line-height: $line-height-brand-lg;
+  letter-spacing: -0.029em;
+}

@@ -1,0 +1,37 @@
+// Отступы и ширины контейнера (1440 / 1280 / 1216)
+
+$container-max: 1280px;
+$content-max: 1216px;
+$page-padding-x-mobile: 16px;
+$page-padding-x-tablet: 32px;
+$page-padding-x-desktop: 80px;
+// Landing / hero / header (Figma 1440: боковые 112px → контент 1216px)
+$page-padding-x-wide: 112px;
+
+$section-padding-y-lg: 112px;
+$section-padding-y-md: 96px;
+$section-padding-y-footer: 48px;
+
+$space-1: 4px;
+$space-2: 6px;
+$space-3: 8px;
+$space-4: 12px;
+$space-5: 16px;
+$space-6: 20px;
+$space-7: 24px;
+$space-8: 28px;
+$space-9: 32px;
+$space-10: 40px;
+$space-11: 48px;
+$space-12: 64px;
+$space-13: 80px;
+$space-14: 96px;
+$space-15: 128px;
+
+$gap-section: 80px;
+$gap-title-block: 24px;
+$gap-cards-row: 32px;
+
+// Хедер / touch (Figma)
+$header-logo-mark-size: 44px;
+$header-cta-padding-y: 13px;

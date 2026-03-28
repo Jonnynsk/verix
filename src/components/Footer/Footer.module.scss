@@ -1,0 +1,223 @@
+@use "../../styles" as *;
+
+.footer {
+  width: 100%;
+  background: $color-slate-900;
+  color: $color-white;
+  border-top: 1px solid $color-gray-200;
+
+  &__inner {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding-block: $space-9 $section-padding-y-footer;
+    padding-inline: $page-padding-x-mobile;
+    box-sizing: border-box;
+
+    @media (min-width: $bp-md) {
+      padding-block: $space-14 $section-padding-y-footer;
+      padding-inline: $page-padding-x-tablet;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-inline: $page-padding-x-wide;
+    }
+  }
+
+  &__main {
+    display: grid;
+    gap: $space-9;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: $space-9 $space-11;
+    }
+
+    @media (min-width: $bp-lg) {
+      grid-template-columns: minmax(0, 268px) repeat(3, minmax(0, 1fr));
+      gap: $space-11;
+      align-items: start;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-title-block;
+    padding-bottom: $space-5;
+
+    @media (min-width: $bp-lg) {
+      padding-bottom: 18px;
+    }
+  }
+
+  &__tagline {
+    margin: 0;
+    max-width: 16.75rem;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-400;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-title-block;
+    padding-bottom: $space-8;
+
+    @media (min-width: $bp-lg) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    padding-block: 2px;
+    font-size: $font-size-footer-heading;
+    line-height: $line-height-footer-heading;
+    letter-spacing: $tracking-footer-heading;
+    font-weight: $font-weight-regular;
+    color: $color-white;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__listContacts {
+    gap: $space-7;
+  }
+
+  &__link {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-400;
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-400;
+      outline-offset: 2px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    gap: $space-5;
+    align-items: flex-start;
+  }
+
+  &__contactIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: $space-10;
+    height: $space-10;
+    border-radius: $radius-md;
+    background: $color-cyan-500-20;
+    color: $color-cyan-500;
+  }
+
+  &__contactBody {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    min-width: 0;
+  }
+
+  &__contactLabel {
+    font-size: $font-size-caption;
+    line-height: $line-height-caption;
+    letter-spacing: $tracking-caption;
+    font-weight: $font-weight-regular;
+    color: $color-slate-500;
+  }
+
+  &__contactValue {
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-cyan-400;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-400;
+      outline-offset: 2px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: $space-7;
+    margin-top: $gap-section;
+    padding-top: 42px;
+    border-top: 2px solid $color-border-marquee;
+
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: $space-7;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    max-width: 31.25rem;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-500;
+  }
+
+  &__legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-9;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__legalLink {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-500;
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $color-slate-200;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-400;
+      outline-offset: 2px;
+    }
+  }
+}

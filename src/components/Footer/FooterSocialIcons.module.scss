@@ -1,0 +1,34 @@
+@use "../../styles" as *;
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $space-11;
+  height: $space-11;
+  border-radius: $radius-lg;
+  color: $color-white;
+  background: $color-white-10;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+
+  &:hover {
+    background: color-mix(in srgb, $color-white 18%, transparent);
+    color: $color-white;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-cyan-400;
+    outline-offset: 2px;
+  }
+}

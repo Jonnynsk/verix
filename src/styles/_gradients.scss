@@ -1,0 +1,99 @@
+// Линейные градиенты с фрейма
+
+$gradient-hero-fade: linear-gradient(
+  135deg,
+  rgb(236, 254, 255) 0%,
+  rgb(255, 255, 255) 0%,
+  rgba(255, 255, 255, 0) 100%
+);
+
+$gradient-primary-cta: linear-gradient(
+  60deg,
+  rgb(6, 182, 212) 25%,
+  rgb(59, 130, 246) 100%
+);
+
+$gradient-card-emerald: linear-gradient(
+  135deg,
+  rgb(236, 253, 245) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+$gradient-card-orange: linear-gradient(
+  135deg,
+  rgb(255, 247, 237) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+$gradient-card-blue: linear-gradient(
+  135deg,
+  rgb(239, 246, 255) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+$gradient-card-amber: linear-gradient(
+  135deg,
+  rgb(255, 251, 235) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+$gradient-card-purple: linear-gradient(
+  135deg,
+  rgb(250, 245, 255) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+$gradient-card-red: linear-gradient(
+  135deg,
+  rgb(254, 242, 242) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+$gradient-card-cyan: linear-gradient(
+  135deg,
+  rgb(236, 254, 255) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+$gradient-card-indigo: linear-gradient(
+  135deg,
+  rgb(238, 242, 255) 0%,
+  rgb(255, 255, 255) 100%
+);
+
+// Иконки / бейджи (круглые)
+$gradient-icon-emerald: linear-gradient(
+  135deg,
+  rgb(16, 185, 129) 0%,
+  rgb(5, 150, 105) 100%
+);
+
+$gradient-icon-blue: linear-gradient(
+  135deg,
+  rgb(59, 130, 246) 0%,
+  rgb(37, 99, 235) 100%
+);
+
+$gradient-icon-purple: linear-gradient(
+  135deg,
+  rgb(168, 85, 247) 0%,
+  rgb(147, 51, 234) 100%
+);
+
+$gradient-icon-orange: linear-gradient(
+  135deg,
+  rgb(249, 115, 22) 0%,
+  rgb(234, 88, 12) 100%
+);
+
+$gradient-icon-amber: linear-gradient(
+  135deg,
+  rgb(245, 158, 11) 0%,
+  rgb(217, 119, 6) 100%
+);
+
+$gradient-icon-cyan: linear-gradient(
+  135deg,
+  rgb(6, 182, 212) 0%,
+  rgb(8, 145, 178) 100%
+);

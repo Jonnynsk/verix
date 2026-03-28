@@ -1,0 +1,36 @@
+// Manrope, weight 400 — все уровни из макета
+
+$font-family-base: "Manrope", system-ui, sans-serif;
+$font-weight-regular: 400;
+
+// Letter-spacing (% font-size → em)
+$tracking-tight-xl: -0.01042em; // ~-1.04% (48px заголовок)
+$tracking-tight-lg: -0.025em; // -2.5% (20px)
+$tracking-tight-md: -0.03125em; // -3.125% (16px body)
+$tracking-wide-sm: 0.0643em; // +6.43% (14px капс / лейблы)
+
+$font-size-marquee: 14px;
+$line-height-marquee: 1.366;
+$line-height-marquee-loose: 1.4286;
+
+$font-size-body: 16px;
+$line-height-body: 1.5;
+
+$font-size-lead: 20px;
+$line-height-lead: 1.4;
+
+$font-size-brand-lg: 24px;
+$line-height-brand-lg: 1.3333333333333333em;
+
+$font-size-footer-heading: 18px;
+$line-height-footer-heading: 1.5555555555555556em;
+$tracking-footer-heading: -0.02778em;
+
+$font-size-caption: 12px;
+$line-height-caption: 1.3333333333333333em;
+$tracking-caption: -0.04167em;
+
+$line-height-body-relaxed: 1.625em;
+
+$font-size-display: 48px;
+$line-height-display: 1;
