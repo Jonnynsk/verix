@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono, Manrope } from "next/font/google";
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Marquee } from "@/components/Marquee";
-import { Geist, Geist_Mono, Manrope } from "next/font/google";
 
 import "./globals.css";
 
@@ -40,7 +40,6 @@ export default function RootLayout({
     >
       <body>
         <Header />
-        <Marquee />
         {children}
         <Footer />
       </body>
