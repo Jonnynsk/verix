@@ -1,0 +1,152 @@
+@use "../../styles" as *;
+
+.reviews {
+  width: 100%;
+  background: $color-slate-50;
+
+  &__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+    padding-inline: $page-padding-x-mobile;
+    padding-block: $space-12;
+
+    @media (min-width: $bp-md) {
+      padding-inline: $page-padding-x-tablet;
+      padding-block: $section-padding-y-footer;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-inline: $page-padding-x-wide;
+      padding-block: $section-padding-y-md;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: $font-weight-regular;
+    color: $color-cyan-600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: $space-4 0 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__grid {
+    margin: $space-9 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: $space-7;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: $bp-lg) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__card {
+    background: $color-white;
+    border-radius: 24px;
+    box-shadow:
+      0 12px 28px rgba(2, 6, 23, 0.08),
+      0 4px 10px rgba(2, 6, 23, 0.04);
+    border: 1px solid $color-border-subtle;
+    padding: $space-9 $space-7;
+    text-align: center;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-4;
+  }
+
+  &__avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: $color-white;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: 14px;
+
+    &--cyan {
+      background: linear-gradient(
+        135deg,
+        rgba(34, 211, 238, 1) 0%,
+        rgba(6, 182, 212, 1) 100%
+      );
+    }
+
+    &--emerald {
+      background: linear-gradient(
+        135deg,
+        rgba(16, 185, 129, 1) 0%,
+        rgba(5, 150, 105, 1) 100%
+      );
+    }
+
+    &--blue {
+      background: linear-gradient(
+        135deg,
+        rgba(99, 102, 241, 1) 0%,
+        rgba(79, 70, 229, 1) 100%
+      );
+    }
+  }
+
+  &__personName {
+    font-size: $font-size-caption;
+    line-height: 1.2;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: 600;
+    color: $color-slate-900;
+  }
+
+  &__personCompany {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 1.2;
+    color: $color-slate-600;
+  }
+
+  &__stars {
+    margin-top: $space-5;
+    color: $color-amber-500;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &__quote {
+    margin: $space-5 0 0;
+    font-size: $font-size-marquee;
+    line-height: 1.55;
+    letter-spacing: $tracking-tight-md;
+    color: $color-slate-600;
+    text-wrap: balance;
+  }
+}
