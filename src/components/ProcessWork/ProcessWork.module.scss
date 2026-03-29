@@ -1,0 +1,210 @@
+@use "../../styles" as *;
+
+$marker-size: 56px;
+
+.process {
+  width: 100%;
+  background: $color-white;
+
+  &__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+    padding-inline: $page-padding-x-mobile;
+    padding-block: $space-11;
+
+    @media (min-width: $bp-md) {
+      padding-inline: $page-padding-x-tablet;
+      padding-block: $section-padding-y-footer;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-inline: $page-padding-x-wide;
+      padding-block: $section-padding-y-md;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: $font-weight-regular;
+    color: $color-cyan-600;
+    text-align: center;
+  }
+
+  &__title {
+    margin: $space-4 0 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__subtitle {
+    margin: $space-5 auto 0;
+    max-width: 36rem;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+    text-align: center;
+    text-wrap: balance;
+
+    @media (min-width: $bp-lg) {
+      margin-top: $space-6;
+    }
+  }
+
+  &__timeline {
+    position: relative;
+    margin-top: $space-11;
+
+    @media (min-width: $bp-lg) {
+      margin-top: $space-13;
+    }
+  }
+
+  &__line {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      position: absolute;
+      top: calc($marker-size / 2 - 1px);
+      left: 12.5%;
+      width: 75%;
+      height: 2px;
+      border: none;
+      border-radius: 1px;
+      background: linear-gradient(
+        90deg,
+        $color-cyan-400 0%,
+        $color-cyan-400 50%,
+        $color-slate-200 50%,
+        $color-slate-200 100%
+      );
+      pointer-events: none;
+    }
+  }
+
+  &__steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $bp-lg) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: $space-7 $space-5;
+      align-items: start;
+    }
+  }
+
+  &__step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: $space-5;
+    row-gap: $space-2;
+    align-items: start;
+
+    & + & {
+      margin-top: $space-8;
+    }
+
+    @media (min-width: $bp-lg) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__markerWrap {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    display: flex;
+    align-self: center;
+
+    @media (min-width: $bp-lg) {
+      grid-row: unset;
+      grid-column: unset;
+      position: relative;
+      z-index: 1;
+      margin-bottom: $space-6;
+    }
+  }
+
+  &__marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $marker-size;
+    height: $marker-size;
+    border-radius: $radius-md;
+    border-width: 2px;
+    border-style: solid;
+    font-size: $font-size-brand-lg;
+    line-height: 1;
+    font-weight: 600;
+
+    &--active {
+      border-color: $color-cyan-400;
+      color: $color-cyan-600;
+      background: $color-white;
+      box-shadow:
+        0 4px 16px rgba(34, 211, 238, 0.22),
+        0 2px 6px rgba(15, 23, 42, 0.06);
+    }
+
+    &--pending {
+      border-color: $color-slate-200;
+      color: $color-slate-400;
+      background: $color-white;
+      box-shadow: $shadow-xs;
+    }
+  }
+
+  &__stepTitle {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: $font-size-footer-heading;
+    line-height: $line-height-footer-heading;
+    letter-spacing: $tracking-footer-heading;
+    font-weight: 600;
+    color: $color-slate-900;
+
+    @media (min-width: $bp-lg) {
+      max-width: 14rem;
+    }
+  }
+
+  &__stepText {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+
+    @media (min-width: $bp-lg) {
+      max-width: 15rem;
+      margin-top: $space-2;
+    }
+  }
+}
