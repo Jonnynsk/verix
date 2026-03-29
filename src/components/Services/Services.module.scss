@@ -1,0 +1,256 @@
+@use "../../styles" as *;
+
+$card-radius: 24px;
+$service-card-width: 283px;
+
+.services {
+  box-sizing: border-box;
+  width: 100%;
+  background: $color-slate-50;
+  padding-inline: $page-padding-x-mobile;
+
+  @media (min-width: $bp-md) {
+    padding-inline: $page-padding-x-tablet;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding-inline: $page-padding-x-wide;
+  }
+
+  &__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+    padding-block: $space-11;
+
+    @media (min-width: $bp-md) {
+      padding-block: $section-padding-y-footer;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-block: $section-padding-y-md;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: $font-weight-regular;
+    color: $color-cyan-600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: $space-4 0 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__subtitle {
+    margin: $space-5 auto 0;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+    text-align: center;
+    text-wrap: balance;
+
+    @media (min-width: $bp-lg) {
+      margin-top: $space-6;
+    }
+  }
+
+  &__grid {
+    list-style: none;
+    margin: $space-11 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: $space-7;
+    justify-items: center;
+
+    /* 4×283px + 3×gap ≈ 1204px — только при ~1440px вьюпорта и padding 112+112 */
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(2, minmax(0, $service-card-width));
+      justify-content: center;
+    }
+
+    @media (min-width: $bp-lg) {
+      margin-top: $space-13;
+    }
+
+    @media (min-width: $bp-2xl) {
+      grid-template-columns: repeat(4, $service-card-width);
+    }
+  }
+
+  &__card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: $service-card-width;
+    padding: $space-9 $space-7;
+    border-radius: $card-radius;
+    text-align: center;
+    scroll-margin-top: 96px;
+
+    @media (min-width: $bp-md) {
+      padding: $space-10 $space-8;
+    }
+
+    @media (min-width: $bp-2xl) {
+      width: $service-card-width;
+      max-width: none;
+    }
+
+    &--blue {
+      background: $gradient-card-blue;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(59, 130, 246, 0.1),
+        0 16px 48px rgba(59, 130, 246, 0.1);
+    }
+
+    &--amber {
+      background: $gradient-card-amber;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(245, 158, 11, 0.12),
+        0 16px 48px rgba(245, 158, 11, 0.1);
+    }
+
+    &--purple {
+      background: $gradient-card-purple;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(168, 85, 247, 0.1),
+        0 16px 48px rgba(168, 85, 247, 0.1);
+    }
+
+    &--red {
+      background: $gradient-card-red;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(239, 68, 68, 0.1),
+        0 16px 48px rgba(239, 68, 68, 0.1);
+    }
+
+    &--cyan {
+      background: $gradient-card-cyan;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(6, 182, 212, 0.12),
+        0 16px 48px rgba(6, 182, 212, 0.1);
+    }
+
+    &--orange {
+      background: $gradient-card-orange;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(249, 115, 22, 0.12),
+        0 16px 48px rgba(249, 115, 22, 0.1);
+    }
+
+    &--emerald {
+      background: $gradient-card-emerald;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(16, 185, 129, 0.1),
+        0 16px 48px rgba(16, 185, 129, 0.1);
+    }
+
+    &--indigo {
+      background: $gradient-card-indigo;
+      box-shadow:
+        $shadow-card-soft,
+        0 0 0 1px rgba(99, 102, 241, 0.1),
+        0 16px 48px rgba(99, 102, 241, 0.1);
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: $space-7;
+    border-radius: $radius-md;
+    flex-shrink: 0;
+    color: $color-white;
+
+    &--blue {
+      background: $gradient-icon-blue;
+      box-shadow: $shadow-glow-blue;
+    }
+
+    &--amber {
+      background: $gradient-icon-amber;
+      box-shadow: $shadow-glow-amber;
+    }
+
+    &--purple {
+      background: $gradient-icon-purple;
+      box-shadow: $shadow-glow-purple;
+    }
+
+    &--red {
+      background: $gradient-icon-red;
+      box-shadow: $shadow-glow-red;
+    }
+
+    &--cyan {
+      background: $gradient-icon-cyan;
+      box-shadow: $shadow-glow-cyan-soft;
+    }
+
+    &--orange {
+      background: $gradient-icon-orange;
+      box-shadow: $shadow-glow-orange;
+    }
+
+    &--emerald {
+      background: $gradient-icon-emerald;
+      box-shadow: $shadow-glow-emerald;
+    }
+
+    &--indigo {
+      background: $gradient-icon-indigo;
+      box-shadow: $shadow-glow-indigo;
+    }
+  }
+
+  &__cardTitle {
+    margin: 0;
+    font-size: $font-size-footer-heading;
+    line-height: $line-height-footer-heading;
+    letter-spacing: $tracking-footer-heading;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-wrap: balance;
+  }
+
+  &__cardText {
+    margin: $space-4 0 0;
+    width: 100%;
+    max-width: 100%;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+    text-wrap: balance;
+  }
+}
