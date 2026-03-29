@@ -1,0 +1,161 @@
+@use "../../styles" as *;
+
+$advantage-card-radius: 24px;
+
+.advantages {
+  width: 100%;
+  background: $color-slate-50;
+
+  &__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+    padding-inline: $page-padding-x-mobile;
+    padding-block: $space-11;
+
+    @media (min-width: $bp-md) {
+      padding-inline: $page-padding-x-tablet;
+      padding-block: $section-padding-y-footer;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-inline: $page-padding-x-wide;
+      padding-block: $section-padding-y-md;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: $font-weight-regular;
+    color: $color-cyan-600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: $space-4 0 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__subtitle {
+    margin: $space-5 auto 0;
+    max-width: 36rem;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+    text-align: center;
+    text-wrap: balance;
+
+    @media (min-width: $bp-lg) {
+      margin-top: $space-6;
+    }
+  }
+
+  &__grid {
+    list-style: none;
+    margin: $space-11 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-7;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $bp-lg) {
+      margin-top: $space-13;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $space-9 $space-7;
+    border-radius: $advantage-card-radius;
+    background: $color-white;
+    box-shadow: $shadow-card-soft;
+    text-align: center;
+
+    @media (min-width: $bp-lg) {
+      padding: $space-10 $space-8;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-bottom: $space-7;
+    border-radius: $radius-md;
+    flex-shrink: 0;
+    color: $color-white;
+
+    &--emerald {
+      background: $gradient-icon-emerald;
+      box-shadow: $shadow-glow-emerald;
+    }
+
+    &--blue {
+      background: $gradient-icon-blue;
+      box-shadow: $shadow-glow-blue;
+    }
+
+    &--purple {
+      background: $gradient-icon-purple;
+      box-shadow: $shadow-glow-purple;
+    }
+
+    &--orange {
+      background: $gradient-icon-orange;
+      box-shadow: $shadow-glow-orange;
+    }
+
+    &--amber {
+      background: $gradient-icon-amber;
+      box-shadow: $shadow-glow-amber;
+    }
+
+    &--cyan {
+      background: $gradient-icon-cyan;
+      box-shadow: $shadow-glow-cyan-soft;
+    }
+  }
+
+  &__cardTitle {
+    margin: 0;
+    font-size: $font-size-footer-heading;
+    line-height: $line-height-footer-heading;
+    letter-spacing: $tracking-footer-heading;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-wrap: balance;
+  }
+
+  &__cardText {
+    margin: $space-4 0 0;
+    max-width: 22rem;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+    text-wrap: balance;
+  }
+}
