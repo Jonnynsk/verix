@@ -1,6 +1,7 @@
+import { Advantages } from "@/components/Advantages";
 import { Marquee } from "@/components/Marquee";
 import { ProcessWork } from "@/components/ProcessWork";
-import { Advantages } from "@/components/Advantages";
+import { Services } from "@/components/Services";
 
 import styles from "./page.module.css";
 
@@ -8,6 +9,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Marquee />
+      <Services />
       <ProcessWork />
       <Advantages />
     </div>
