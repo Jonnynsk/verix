@@ -52,6 +52,8 @@ const STATS = [
   { value: "24/7", label: "Поддержка" },
 ] as const;
 
+const heroImageSrc = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero/hero-main.jpg`;
+
 export function Hero() {
   return (
     <section id="consult" className={styles.hero} aria-labelledby="hero-title">
@@ -103,7 +105,7 @@ export function Hero() {
             <div className={styles.hero__imageWrap}>
               <Image
                 className={styles.hero__image}
-                src="/images/hero/hero-main.jpg"
+                src={heroImageSrc}
                 alt="Специалисты центра сертификации за работой"
                 fill
                 sizes="(min-width: 1024px) 492px, 100vw"
