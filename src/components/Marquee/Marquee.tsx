@@ -2,6 +2,7 @@ import { Fragment } from "react";
 
 import { MARQUEE_ITEMS } from "./constants";
 import { MarqueeIcon } from "./MarqueeIcon";
+
 import styles from "./Marquee.module.scss";
 
 function MarqueeRow() {
