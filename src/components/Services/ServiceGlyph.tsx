@@ -68,11 +68,12 @@ export function ServiceGlyph({ id }: { id: ServiceIconId }) {
           <circle cx="12" cy="12" r="8" />
         </svg>
       );
-    case "leaf":
+    case "fileCheck":
       return (
         <svg {...common} aria-hidden>
-          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+          <path d="M14 2v4h4" />
+          <path d="m9 13 2 2 4-4" />
         </svg>
       );
     case "scale":
@@ -83,6 +84,34 @@ export function ServiceGlyph({ id }: { id: ServiceIconId }) {
           <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1" />
           <path d="m5 8 3 8a5 5 0 0 1-6 0zV7" />
           <path d="M7 21h10" />
+        </svg>
+      );
+    case "markHonest":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={22}
+          height={22}
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden
+        >
+          <path
+            d="
+        M2 6 a 4 4 0 0 1 4 -4 H10 v 2 H6 a 2 2 0 0 0 -2 2 V10 H2 Z
+        M22 6 a 4 4 0 0 0 -4 -4 H14 v 2 h 4 a 2 2 0 0 1 2 2 V10 h 2 Z
+        M2 18 a 4 4 0 0 0 4 4 H10 v -2 H6 a 2 2 0 0 1 -2 -2 V14 H2 Z
+        M22 18 a 4 4 0 0 1 -4 4 H14 v -2 h 4 a 2 2 0 0 0 2 -2 V14 h 2 Z
+      "
+          />
+          <path
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M8.05 13.35L10.95 16.05L16.95 9.85"
+          />
         </svg>
       );
   }

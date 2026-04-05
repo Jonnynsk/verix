@@ -13,7 +13,8 @@ export type ServiceTone =
   | "cyan"
   | "orange"
   | "emerald"
-  | "indigo";
+  | "indigo"
+  | "honest";
 
 export type ServiceIconId =
   | "shieldCheck"
@@ -22,8 +23,9 @@ export type ServiceIconId =
   | "flame"
   | "flask"
   | "cog"
-  | "leaf"
-  | "scale";
+  | "scale"
+  | "markHonest"
+  | "fileCheck";
 
 export const SERVICE_CARDS: ReadonlyArray<{
   anchor: string;
@@ -41,10 +43,10 @@ export const SERVICE_CARDS: ReadonlyArray<{
     icon: "shieldCheck",
   },
   {
-    anchor: "service-iso",
-    title: "Системы ISO",
+    anchor: "service-gost",
+    title: "Декларирование ГОСТ Р",
     description:
-      "Внедрение и сертификация систем менеджмента качества международных стандартов",
+      "Подтверждение соответствия продукции требованиям национальных стандартов",
     tone: "purple",
     icon: "award",
   },
@@ -57,12 +59,12 @@ export const SERVICE_CARDS: ReadonlyArray<{
     icon: "mail",
   },
   {
-    anchor: "service-fire",
-    title: "Пожарная безопасность",
+    anchor: "service-honest",
+    title: "Честный знак",
     description:
-      "Сертификаты и декларации пожарной безопасности на продукцию и строительные материалы",
-    tone: "red",
-    icon: "flame",
+      "Помощь в регистрации и маркировке товаров в национальной системе прослеживаемости",
+    tone: "honest",
+    icon: "markHonest",
   },
   {
     anchor: "service-sgr",
@@ -89,11 +91,10 @@ export const SERVICE_CARDS: ReadonlyArray<{
     icon: "scale",
   },
   {
-    anchor: "service-eco",
-    title: "Эко-сертификация",
-    description:
-      "Подтверждение экологической безопасности продукции и производственных процессов",
+    anchor: "service-voluntary",
+    title: "Добровольная сертификация",
+    description: "Подтверждение определённых характеристик продукции и услуг",
     tone: "emerald",
-    icon: "leaf",
+    icon: "fileCheck",
   },
 ];

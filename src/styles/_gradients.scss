@@ -49,6 +49,13 @@ $gradient-card-red: linear-gradient(
   rgb(255, 255, 255) 100%
 );
 
+/* «Честный знак» — светло-жёлтая карточка (как в макете) */
+$gradient-card-honest: linear-gradient(
+  135deg,
+  rgb(254, 252, 232) 0%,
+  rgb(255, 255, 255) 100%
+);
+
 $gradient-card-cyan: linear-gradient(
   135deg,
   rgb(236, 254, 255) 0%,

@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const basePath = "/verix";
+const basePath = process.env.NODE_ENV === "development" ? "" : "/verix";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
@@ -8,8 +8,7 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
   output: "export",
-  basePath,
-  assetPrefix: `${basePath}/`,
+  ...(basePath ? { basePath, assetPrefix: `${basePath}/` } : {}),
   trailingSlash: true,
   images: {
     unoptimized: true,
