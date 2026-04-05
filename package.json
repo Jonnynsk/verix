@@ -1,11 +1,13 @@
 {
   "name": "verix",
   "version": "0.1.0",
+  "homepage": "https://Jonnynsk.github.io/verix/",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "npm run build && gh-pages -d out --nojekyll"
   },
   "dependencies": {
     "next": "16.2.1",
@@ -17,6 +19,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.85.0",
     "typescript": "^5"
   }

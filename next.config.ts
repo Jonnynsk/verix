@@ -1,8 +1,16 @@
 import type { NextConfig } from "next";
 
+const basePath = "/verix";
+
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
+  output: "export",
+  basePath,
+  assetPrefix: `${basePath}/`,
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

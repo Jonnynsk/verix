@@ -19,17 +19,17 @@ export function HeaderNav({
 }: HeaderNavProps) {
   const navClass =
     variant === "horizontal"
-      ? `${styles.nav} ${styles.horizontal}`
-      : styles.nav;
+      ? `${styles.headerNav} ${styles["headerNav--horizontal"]}`
+      : styles.headerNav;
 
   return (
     <nav className={navClass} id={id} aria-label="Основная навигация">
-      <ul className={styles.list}>
+      <ul className={styles.headerNav__list}>
         {items.map((item) => (
           <li key={item.href}>
             <a
               href={item.href}
-              className={styles.link}
+              className={styles.headerNav__link}
               onClick={onNavigate}
             >
               {item.label}
