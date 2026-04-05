@@ -10,6 +10,13 @@
     flex-shrink: 0;
   }
 
+  &__brandMark {
+    display: block;
+    width: 42px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
   &__mark {
     display: flex;
     align-items: center;
