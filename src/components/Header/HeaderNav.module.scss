@@ -1,70 +1,70 @@
 @use "../../styles" as *;
 
-.nav {
+.headerNav {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: $space-3;
-}
 
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: $space-1;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.link {
-  display: block;
-  padding: 10px $space-4;
-  border-radius: $radius-sm;
-  font-size: $font-size-body;
-  line-height: $line-height-body;
-  letter-spacing: $tracking-tight-md;
-  font-weight: $font-weight-regular;
-  color: $color-slate-700;
-  text-decoration: none;
-  transition:
-    background-color 0.15s ease,
-    color 0.15s ease;
-
-  &:hover {
-    color: $color-slate-900;
-    background-color: color-mix(in srgb, $color-slate-200 35%, transparent);
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  &:focus-visible {
-    outline: 2px solid $color-cyan-500;
-    outline-offset: 2px;
-  }
-}
+  &__link {
+    display: block;
+    padding: 10px $space-4;
+    border-radius: $radius-sm;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-700;
+    text-decoration: none;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
 
-.horizontal {
-  flex-direction: row;
-  align-items: center;
-  gap: $space-10;
+    &:hover {
+      color: $color-slate-900;
+      background-color: color-mix(in srgb, $color-slate-200 35%, transparent);
+    }
 
-  .list {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: $space-7;
-
-    @media (min-width: $bp-lg) {
-      gap: $space-10;
+    &:focus-visible {
+      outline: 2px solid $color-cyan-500;
+      outline-offset: 2px;
     }
   }
 
-  .link {
-    padding: 0;
-    border-radius: 0;
-    white-space: nowrap;
+  &--horizontal {
+    flex-direction: row;
+    align-items: center;
+    gap: $space-10;
 
-    &:hover {
-      background: none;
-      color: $color-slate-900;
+    .headerNav__list {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: $space-7;
+
+      @media (min-width: $bp-lg) {
+        gap: $space-10;
+      }
+    }
+
+    .headerNav__link {  
+      padding: 0;
+      border-radius: 0;
+      white-space: nowrap;
+
+      &:hover {
+        background: none;
+        color: $color-slate-900;
+      }
     }
   }
 }

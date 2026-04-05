@@ -15,15 +15,23 @@ export function HeaderLogo({
   const isFooter = variant === "footer";
 
   return (
-    <Link href={href} className={styles.link} aria-label="Верикс — на главную">
+    <Link
+      href={href}
+      className={styles.headerLogo__link}
+      aria-label="Верикс — на главную"
+    >
       <span
-        className={`${styles.mark} ${isFooter ? styles.mark_footer : ""}`}
+        className={`${styles.headerLogo__mark} ${
+          isFooter ? styles["headerLogo__mark_footer"] : ""
+        }`}
         aria-hidden
       >
         В
       </span>
       <span
-        className={`${styles.wordmark} ${isFooter ? styles.wordmark_footer : ""}`}
+        className={`${styles.headerLogo__wordmark} ${
+          isFooter ? styles["headerLogo__wordmark_footer"] : ""
+        }`}
       >
         ВЕРИКС
       </span>

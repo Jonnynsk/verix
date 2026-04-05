@@ -12,22 +12,24 @@ export function HeaderActions({
   variant = "stacked",
   onConsultClick,
 }: HeaderActionsProps) {
-  const wrapClass =
-    variant === "inline" ? `${styles.wrap} ${styles.inline}` : styles.wrap;
+  const rootClass =
+    variant === "inline"
+      ? `${styles.headerActions} ${styles["headerActions--inline"]}`
+      : styles.headerActions;
 
   return (
-    <div className={wrapClass}>
-      <div className={styles.phoneRow}>
-        <span className={styles.iconCircle}>
+    <div className={rootClass}>
+      <div className={styles.headerActions__phoneRow}>
+        <span className={styles.headerActions__iconCircle}>
           <PhoneIcon />
         </span>
-        <a className={styles.phone} href={`tel:${PHONE_TEL}`}>
+        <a className={styles.headerActions__phone} href={`tel:${PHONE_TEL}`}>
           {PHONE_DISPLAY}
         </a>
       </div>
       <a
         href="#consult"
-        className={styles.consult}
+        className={styles.headerActions__consult}
         onClick={onConsultClick}
       >
         Консультация

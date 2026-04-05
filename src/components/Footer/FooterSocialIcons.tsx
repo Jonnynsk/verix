@@ -43,7 +43,7 @@ export function FooterSocialIcons() {
         <li key={item.href}>
           <a
             href={item.href}
-            className={styles.link}
+            className={styles.list__link}
             aria-label={item.label}
             target="_blank"
             rel="noopener noreferrer"
