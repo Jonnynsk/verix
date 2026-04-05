@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none" aria-hidden="true">
+  <!-- 520O :>@>B:0O =>30: #002D51; ?@020O 4;8==0O: #00B4B4 (@8AC5BAO 2B>@>9  ?>25@E) -->
+  <line
+    x1="18"
+    y1="42"
+    x2="46"
+    y2="70"
+    stroke="#002D51"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+  <line
+    x1="46"
+    y1="70"
+    x2="102"
+    y2="24"
+    stroke="#00B4B4"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+</svg>
