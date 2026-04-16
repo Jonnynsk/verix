@@ -4,17 +4,19 @@ export const FOOTER_TAGLINE =
 export const FOOTER_SERVICES = [
   { href: "#service-trts", label: "Сертификация ТР ТС" },
   { href: "#service-gost", label: "Декларирование ГОСТ Р" },
-  { href: "#service-fire", label: "Пожарная безопасность" },
   { href: "#service-refusal", label: "Отказные письма" },
-  { href: "#service-iso", label: "Сертификация ISO" },
+  { href: "#service-honest", label: "Честный знак" },
+  { href: "#service-sgr", label: "Свидетельства СГР" },
+  { href: "#service-tu", label: "Разработка ТУ" },
+  { href: "#service-expert", label: "Экспертные заключения" },
+  { href: "#service-voluntary", label: "Добровольная сертификация" },
 ] as const;
 
 export const FOOTER_COMPANY = [
-  { href: "#about", label: "О нас" },
+  { href: "#services", label: "Услуги" },
   { href: "#advantages", label: "Преимущества" },
-  { href: "#reviews", label: "Отзывы клиентов" },
-  { href: "#blog", label: "Блог и статьи" },
-  { href: "#contacts", label: "Контакты" },
+  { href: "#process", label: "Процесс" },
+  { href: "#reviews", label: "Отзывы" },
 ] as const;
 
 export const FOOTER_SOCIAL = [

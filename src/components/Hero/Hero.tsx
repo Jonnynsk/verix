@@ -79,7 +79,7 @@ export function Hero() {
           </p>
 
           <div className={styles.hero__actions}>
-            <a className={styles.hero__ctaPrimary} href="#consult">
+            <a className={styles.hero__ctaPrimary} href="#social-consult">
               Бесплатная консультация
               <ArrowRightIcon />
             </a>
