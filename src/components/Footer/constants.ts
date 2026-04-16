@@ -35,7 +35,7 @@ export const FOOTER_SOCIAL = [
   },
 ];
 
-export const FOOTER_LEGAL = [
-  { href: "#privacy", label: "Политика конфиденциальности" },
-  { href: "#terms", label: "Пользовательское соглашение" },
-] as const;
+// export const FOOTER_LEGAL = [
+//   { href: "#privacy", label: "Политика конфиденциальности" },
+//   { href: "#terms", label: "Пользовательское соглашение" },
+// ] as const;

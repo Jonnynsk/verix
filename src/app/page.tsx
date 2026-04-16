@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { ProcessWork } from "@/components/ProcessWork";
 import { Services } from "@/components/Services";
+import { SocialCta } from "@/components/SocialCta";
 import { Reviews } from "@/components/Reviews";
 
 import styles from "./page.module.css";
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <ProcessWork />
       <Advantages />
+      <SocialCta />
       <Reviews />
     </div>
   );

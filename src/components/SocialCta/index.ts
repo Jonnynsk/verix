@@ -1,0 +1,2 @@
+export { SocialCta } from "./SocialCta";
+

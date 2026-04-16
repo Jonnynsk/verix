@@ -7,7 +7,7 @@ import {
 } from "@/constants/site";
 import {
   FOOTER_COMPANY,
-  FOOTER_LEGAL,
+  // FOOTER_LEGAL,
   FOOTER_SERVICES,
   FOOTER_TAGLINE,
 } from "./constants";
@@ -154,7 +154,7 @@ export function Footer() {
           <p className={styles.footer__copyright}>
             © {year} Сертификационный центр ВЕРИКС. Все права защищены.
           </p>
-          <ul className={styles.footer__legal}>
+          {/* <ul className={styles.footer__legal}>
             {FOOTER_LEGAL.map((item) => (
               <li key={item.href}>
                 <a className={styles.footer__legalLink} href={item.href}>
@@ -162,7 +162,7 @@ export function Footer() {
                 </a>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
     </footer>

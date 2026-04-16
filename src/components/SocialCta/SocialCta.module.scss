@@ -1,0 +1,129 @@
+@use "../../styles" as *;
+
+.socialCta {
+  width: 100%;
+  padding-inline: $page-padding-x-mobile;
+  padding-block: $space-9;
+  background: $color-white;
+  scroll-margin-top: var(--header-offset);
+
+  &__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+    padding: $space-11 $space-7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-7;
+    border-radius: $radius-xl;
+    background: $gradient-primary-cta;
+    box-shadow: $shadow-glow-cyan-soft;
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $space-5;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-white;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__subtitle {
+    margin: 0;
+    max-width: 36rem;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-white-90;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-4;
+    min-height: 64px;
+    padding: 16px 22px;
+    border-radius: $radius-lg;
+    background: $color-white;
+    border: 2px solid $color-border-subtle;
+    text-decoration: none;
+    color: $color-slate-900;
+    box-shadow: $shadow-xs;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      background: $color-slate-50;
+      border-color: $color-slate-200;
+      transform: translateY(-1px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-600;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 446px) {
+      width: 100%;
+    }
+  }
+
+  &__buttonIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-md;
+    background: $color-cyan-500-20;
+    color: $color-cyan-500;
+    flex-shrink: 0;
+  }
+
+  &__buttonLabel {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    font-weight: 600;
+    letter-spacing: $tracking-tight-md;
+    white-space: nowrap;
+  }
+
+  &__warning {
+    margin: 0;
+    max-width: 48rem;
+    font-size: $font-size-caption;
+    line-height: $line-height-caption;
+    letter-spacing: $tracking-caption;
+    font-weight: $font-weight-regular;
+    color: $color-white-90;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  @media (min-width: $bp-md) {
+    padding-block: $space-12;
+    &__inner {
+      padding: $section-padding-y-footer $space-8;
+    }
+  }
+}
