@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[3652,["/verix/_next/static/chunks/13d72oel~e3sb.js","/verix/_next/static/chunks/0n_3qpznkw6w2.js"],"default"]
-3:I[79807,["/verix/_next/static/chunks/13d72oel~e3sb.js","/verix/_next/static/chunks/0n_3qpznkw6w2.js"],"default"]
+2:I[3652,["/verix/_next/static/chunks/13uhwhdb8wbp..js","/verix/_next/static/chunks/0n_3qpznkw6w2.js"],"default"]
+3:I[79807,["/verix/_next/static/chunks/13uhwhdb8wbp..js","/verix/_next/static/chunks/0n_3qpznkw6w2.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"TJzKSiQnb8WWvpaRO9qBH"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"0QL5s20XeWfVQO1SjZ3Uh"}
