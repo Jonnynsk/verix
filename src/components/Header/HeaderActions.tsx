@@ -28,7 +28,7 @@ export function HeaderActions({
         </a>
       </div>
       <a
-        href="#consult"
+        href="#social-consult"
         className={styles.headerActions__consult}
         onClick={onConsultClick}
       >

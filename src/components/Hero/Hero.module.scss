@@ -341,6 +341,17 @@ $green-500: #22c55e;
       max-width: calc(100% - 16px);
       animation-delay: -2.1s;
     }
+
+    @media (max-width: calc($bp-2xl - 1px)) {
+      &_speed {
+        /* На ~1370px “Быстро” должно быть на одном уровне с “Сертифицировано” */
+        left: -6%;
+        right: auto;
+        top: auto;
+        bottom: 8%;
+        animation-delay: -2.1s;
+      }
+    }
   }
 
   &__floatIcon {
