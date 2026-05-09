@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[7555,["/verix/_next/static/chunks/0cbyf2ay2m4qi.js","/verix/_next/static/chunks/0n_3qpznkw6w2.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+:HL["/verix/_next/static/chunks/0utbs.rfv06zp.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"privacy-module-scss-module__znoTKW__privacy","children":["$","div",null,{"className":"privacy-module-scss-module__znoTKW__privacy__inner","children":[["$","h1",null,{"className":"privacy-module-scss-module__znoTKW__privacy__title","children":"Политика конфиденциальности"}],["$","p",null,{"className":"privacy-module-scss-module__znoTKW__privacy__text","children":"Текст политики можно вставить сюда. Если нужно — сделаю аккуратную верстку под ваш контент (разделы, списки, якоря, дата обновления)."}]]}]}],[["$","link","0",{"rel":"stylesheet","href":"/verix/_next/static/chunks/0utbs.rfv06zp.css","precedence":"next"}]],["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"NPR6gDhpEUVCbR13R-e2r"}
+4:null

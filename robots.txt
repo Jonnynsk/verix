@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://jonnynsk.github.io/verix/
+Sitemap: https://jonnynsk.github.io/verix/sitemap.xml
