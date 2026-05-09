@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { PHONE_DISPLAY, PHONE_TEL } from "./constants";
 import { PhoneIcon } from "./PhoneIcon";
 
@@ -27,13 +29,13 @@ export function HeaderActions({
           {PHONE_DISPLAY}
         </a>
       </div>
-      <a
-        href="#social-consult"
+      <Link
+        href="/#social-consult"
         className={styles.headerActions__consult}
         onClick={onConsultClick}
       >
         Консультация
-      </a>
+      </Link>
     </div>
   );
 }

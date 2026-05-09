@@ -1,3 +1,7 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { NAV_ITEMS } from "./constants";
 
 import styles from "./HeaderNav.module.scss";
@@ -17,6 +21,9 @@ export function HeaderNav({
   id,
   onNavigate,
 }: HeaderNavProps) {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   const navClass =
     variant === "horizontal"
       ? `${styles.headerNav} ${styles["headerNav--horizontal"]}`
@@ -27,13 +34,15 @@ export function HeaderNav({
       <ul className={styles.headerNav__list}>
         {items.map((item) => (
           <li key={item.href}>
-            <a
-              href={item.href}
+            <Link
+              href={
+                !isHome && item.href.startsWith("#") ? `/${item.href}` : item.href
+              }
               className={styles.headerNav__link}
               onClick={onNavigate}
             >
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
