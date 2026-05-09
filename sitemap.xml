@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://jonnynsk.github.io/verix/</loc>
-<lastmod>2026-05-09T09:02:45.887Z</lastmod>
+<lastmod>2026-05-09T10:33:19.889Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>1</priority>
+</url>
+<url>
+<loc>https://jonnynsk.github.io/verix//privacy</loc>
+<lastmod>2026-05-09T10:33:19.889Z</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.2</priority>
+</url>
+<url>
+<loc>https://jonnynsk.github.io/verix//terms</loc>
+<lastmod>2026-05-09T10:33:19.889Z</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.2</priority>
 </url>
 </urlset>
