@@ -1,6 +1,7 @@
 @use "../../styles" as *;
 
 .privacy {
+  background: $color-white;
   padding-inline: $page-padding-x-mobile;
   padding-top: $space-13;
   padding-bottom: $space-13;
@@ -10,10 +11,31 @@
     margin-inline: auto;
   }
 
+  &__article {
+    display: flex;
+    flex-direction: column;
+    gap: $space-7;
+  }
+
   &__title {
     margin: 0 0 $space-6;
     font-size: $font-size-brand-lg;
     line-height: $line-height-brand-lg;
+    color: $color-slate-900;
+  }
+
+  &__heading {
+    margin: $space-8 0 $space-4;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    color: $color-slate-900;
+  }
+
+  &__subheading {
+    margin: $space-6 0 $space-3;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    font-weight: 600;
     color: $color-slate-900;
   }
 
@@ -22,6 +44,63 @@
     font-size: $font-size-body;
     line-height: $line-height-body;
     color: $color-slate-700;
+  }
+
+  &__text {
+    &--spaced {
+      margin-top: $space-4;
+    }
+  }
+
+  &__section {
+    scroll-margin-top: 96px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: $space-4 0 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    color: $color-slate-700;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+
+    li {
+      margin: 0;
+    }
+  }
+
+  &__bullets {
+    margin: $space-4 0 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    color: $color-slate-700;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+
+    li {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    color: $color-cyan-700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $color-cyan-800;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-500;
+      outline-offset: 2px;
+      border-radius: $radius-sm;
+    }
   }
 }
 
