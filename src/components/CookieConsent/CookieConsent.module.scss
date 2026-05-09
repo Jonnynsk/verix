@@ -1,0 +1,86 @@
+@use "../../styles" as *;
+
+.cookieConsent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  padding: $space-4;
+  background: $color-white-95;
+  border-top: 1px solid $color-border-subtle;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+    box-sizing: border-box;
+
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+      align-items: center;
+      gap: $space-6;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-slate-800;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+  }
+
+  &__link {
+    color: $color-cyan-700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $color-cyan-800;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-500;
+      outline-offset: 2px;
+      border-radius: $radius-sm;
+    }
+  }
+
+  &__button {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-3 $space-5;
+    border-radius: $radius-md;
+    border: 1px solid color-mix(in srgb, $color-slate-200 90%, transparent);
+    background: $color-slate-900;
+    color: $color-white;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      transform 0.05s ease;
+
+    &:hover {
+      background: $color-slate-800;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-500;
+      outline-offset: 2px;
+    }
+  }
+}
+
