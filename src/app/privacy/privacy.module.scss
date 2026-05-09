@@ -1,0 +1,27 @@
+@use "../../styles" as *;
+
+.privacy {
+  padding-inline: $page-padding-x-mobile;
+  padding-top: $space-13;
+  padding-bottom: $space-13;
+
+  &__inner {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  &__title {
+    margin: 0 0 $space-6;
+    font-size: $font-size-brand-lg;
+    line-height: $line-height-brand-lg;
+    color: $color-slate-900;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    color: $color-slate-700;
+  }
+}
+
