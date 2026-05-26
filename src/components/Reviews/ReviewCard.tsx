@@ -3,7 +3,6 @@
 import { useId, useMemo, useState } from "react";
 
 import type { Review } from "./constants";
-import { Stars } from "./Stars";
 
 import styles from "./Reviews.module.scss";
 
@@ -40,7 +39,6 @@ export function ReviewCard({ review }: ReviewCardProps) {
 
         <div className={styles.reviews__personName}>{review.name}</div>
       </div>
-
 
       <p
         id={quoteId}

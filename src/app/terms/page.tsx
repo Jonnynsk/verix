@@ -22,8 +22,11 @@ export default function TermsPage() {
                 1.1. Настоящее Пользовательское соглашение (далее — Соглашение)
                 относится к веб-сайту «Сертификационный центр ВЕРИКС» (далее —
                 Веб-сайт), расположенному по адресу{" "}
-                <a className={styles.privacy__link} href="https://verix.ru">
-                  https://verix.ru
+                <a
+                  className={styles.privacy__link}
+                  href="https://verix-cert.ru"
+                >
+                  https://verix-cert.ru
                 </a>
                 .
               </li>
@@ -45,7 +48,9 @@ export default function TermsPage() {
           </section>
 
           <section className={styles.privacy__section} id="obligations">
-            <h2 className={styles.privacy__heading}>2. Обязанности Пользователя</h2>
+            <h2 className={styles.privacy__heading}>
+              2. Обязанности Пользователя
+            </h2>
             <ol className={styles.privacy__list}>
               <li>
                 2.1. Пользователь соглашается не предпринимать действий, которые
@@ -72,16 +77,18 @@ export default function TermsPage() {
             </ol>
           </section>
 
-          <section className={styles.privacy__section} id="intellectual-property">
+          <section
+            className={styles.privacy__section}
+            id="intellectual-property"
+          >
             <h2 className={styles.privacy__heading}>
               3. Интеллектуальная собственность
             </h2>
             <ol className={styles.privacy__list}>
               <li>
-                3.1. Все объекты, доступные на Веб-сайте, включая элементы
-                дизайна, текст, графические изображения, иллюстрации, скрипты,
-                программы и другие объекты, являются объектами исключительных
-                прав Администрации Веб-сайта.
+                3.1. Все материалы сайта принадлежат Администрации сайта либо
+                используются на законных основаниях с разрешения соответствующих
+                правообладателей.
               </li>
               <li>
                 3.2. Никакие элементы контента не могут быть использованы иным
@@ -92,7 +99,9 @@ export default function TermsPage() {
           </section>
 
           <section className={styles.privacy__section} id="disclaimer">
-            <h2 className={styles.privacy__heading}>4. Отказ от ответственности</h2>
+            <h2 className={styles.privacy__heading}>
+              4. Отказ от ответственности
+            </h2>
             <ol className={styles.privacy__list}>
               <li>
                 4.1. Любые материалы и информацию, доступ к которым Пользователь
@@ -101,9 +110,8 @@ export default function TermsPage() {
                 ответственность за возможные последствия.
               </li>
               <li>
-                4.2. Администрация Веб-сайта не несет ответственности за любые
-                виды убытков, произошедшие вследствие использования Пользователем
-                Веб-сайта или отдельных частей/функций Веб-сайта.
+                4.2. Администрация не несет ответственности за убытки
+                пользователя, возникшие в результате использования сайта.
               </li>
               <li>
                 4.3. Администрация не гарантирует, что Веб-сайт будет
@@ -137,8 +145,11 @@ export default function TermsPage() {
               <li>
                 5.3. Актуальная версия Соглашения находится в свободном доступе
                 по адресу:{" "}
-                <a className={styles.privacy__link} href="https://verix.ru/terms">
-                  https://verix.ru/terms
+                <a
+                  className={styles.privacy__link}
+                  href="https://verix-cert.ru/terms"
+                >
+                  https://verix-cert.ru/terms
                 </a>
                 .
               </li>
@@ -149,4 +160,3 @@ export default function TermsPage() {
     </main>
   );
 }
-

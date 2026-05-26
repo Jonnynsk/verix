@@ -3,7 +3,7 @@ export const SERVICES_TAG = "Наши услуги";
 export const SERVICES_TITLE = "Полный спектр услуг";
 
 export const SERVICES_SUBTITLE =
-  "Профессиональное оформление всех видов разрешительной документации";
+  "Профессиональное оформление всех видов разрешительной документации. Выгрузка в реестр, макет, подбор кода ТН ВЭД";
 
 export type ServiceTone =
   | "blue"
@@ -54,7 +54,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
     anchor: "service-refusal",
     title: "Отказные письма",
     description:
-      "Официальные разъяснения о том, что продукция не подлежит обязательной сертификации",
+      "Оформим отказное письмо для Wildberries, Ozon, Яндекс Маркета. Подходит для ИП и самозанятых",
     tone: "amber",
     icon: "mail",
   },

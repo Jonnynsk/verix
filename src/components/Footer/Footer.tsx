@@ -11,6 +11,7 @@ import {
   FOOTER_SERVICES,
   FOOTER_TAGLINE,
 } from "./constants";
+import { FooterLink } from "./FooterLink";
 import { FooterSocialIcons } from "./FooterSocialIcons";
 
 import styles from "./Footer.module.scss";
@@ -75,9 +76,9 @@ export function Footer() {
             <ul className={styles.footer__list}>
               {FOOTER_SERVICES.map((item) => (
                 <li key={item.href}>
-                  <a className={styles.footer__link} href={item.href}>
+                  <FooterLink className={styles.footer__link} href={item.href}>
                     {item.label}
-                  </a>
+                  </FooterLink>
                 </li>
               ))}
             </ul>
@@ -88,9 +89,9 @@ export function Footer() {
             <ul className={styles.footer__list}>
               {FOOTER_COMPANY.map((item) => (
                 <li key={item.href}>
-                  <a className={styles.footer__link} href={item.href}>
+                  <FooterLink className={styles.footer__link} href={item.href}>
                     {item.label}
-                  </a>
+                  </FooterLink>
                 </li>
               ))}
             </ul>
@@ -157,9 +158,12 @@ export function Footer() {
           <ul className={styles.footer__legal}>
             {FOOTER_LEGAL.map((item) => (
               <li key={item.href}>
-                <a className={styles.footer__legalLink} href={item.href}>
+                <FooterLink
+                  className={styles.footer__legalLink}
+                  href={item.href}
+                >
                   {item.label}
-                </a>
+                </FooterLink>
               </li>
             ))}
           </ul>

@@ -57,6 +57,7 @@ $service-card-width: 283px;
 
   &__subtitle {
     margin: $space-5 auto 0;
+    max-width: 40rem;
     font-size: $font-size-lead;
     line-height: $line-height-lead;
     letter-spacing: $tracking-tight-md;
