@@ -40,8 +40,8 @@ export default function PrivacyPage() {
                 персональных данных (далее — Политика) применяется ко всей
                 информации, которую Оператор может получить о посетителях
                 веб-сайта{" "}
-                <a className={styles.privacy__link} href="https://verix.ru">
-                  https://verix.ru
+                <a className={styles.privacy__link} href="https://verix-cert.ru">
+                  https://verix-cert.ru
                 </a>
                 .
               </li>
@@ -67,8 +67,8 @@ export default function PrivacyPage() {
                 2.3. Веб-сайт — совокупность графических и информационных
                 материалов, а также программ для ЭВМ и баз данных,
                 обеспечивающих их доступность в сети интернет по сетевому адресу{" "}
-                <a className={styles.privacy__link} href="https://verix.ru">
-                  https://verix.ru
+                <a className={styles.privacy__link} href="https://verix-cert.ru">
+                  https://verix-cert.ru
                 </a>
                 .
               </li>
@@ -106,8 +106,8 @@ export default function PrivacyPage() {
                 2.8. Персональные данные — любая информация, относящаяся прямо
                 или косвенно к определенному или определяемому Пользователю
                 веб-сайта{" "}
-                <a className={styles.privacy__link} href="https://verix.ru">
-                  https://verix.ru
+                <a className={styles.privacy__link} href="https://verix-cert.ru"> 
+                  https://verix-cert.ru
                 </a>
                 .
               </li>
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
               </li>
               <li>
                 2.10. Пользователь — любой посетитель веб-сайта
-                https://verix.ru.
+                https://verix-cert.ru.
               </li>
               <li>
                 2.11. Предоставление персональных данных — действия,
@@ -454,13 +454,8 @@ export default function PrivacyPage() {
                 данным неуполномоченных лиц.
               </li>
               <li>
-                8.2. Персональные данные Пользователя никогда, ни при каких
-                условиях не будут переданы третьим лицам, за исключением
-                случаев, связанных с исполнением действующего законодательства,
-                либо в случае, если субъектом персональных данных дано согласие
-                Оператору на передачу данных третьему лицу для исполнения
-                обязательств по гражданско-правовому договору, а также случаев,
-                описанных в п. 8.5 настоящей Политики.
+                8.2. Персональные данные могут передаваться третьим лицам только
+                в случаях, предусмотренных законодательством РФ.
               </li>
               <li>
                 8.3. В случае выявления неточностей в персональных данных
@@ -617,9 +612,9 @@ export default function PrivacyPage() {
                 в сети Интернет по адресу{" "}
                 <a
                   className={styles.privacy__link}
-                  href="https://verix.ru/privacy"
+                  href="https://verix-cert.ru/privacy"
                 >
-                  https://verix.ru/privacy
+                  https://verix-cert.ru/privacy
                 </a>
                 .
               </li>

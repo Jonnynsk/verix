@@ -1,25 +1,25 @@
 import type { MetadataRoute } from "next";
 
-import { SEO_CANONICAL_URL } from "@/constants/seo";
+import { seoPathUrl } from "@/constants/seo";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: SEO_CANONICAL_URL,
+      url: seoPathUrl(),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${SEO_CANONICAL_URL}/privacy`,
+      url: seoPathUrl("privacy"),
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.2,
     },
     {
-      url: `${SEO_CANONICAL_URL}/terms`,
+      url: seoPathUrl("terms"),
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.2,

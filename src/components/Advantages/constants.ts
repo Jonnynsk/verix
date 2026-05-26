@@ -3,7 +3,7 @@ export const ADVANTAGES_TAG = "Наши преимущества";
 export const ADVANTAGES_TITLE = "Почему выбирают нас?";
 
 export const ADVANTAGES_SUBTITLE =
-  "Индивидуальный подход и гарантия качества на каждом этапе";
+  "Все выпущенные документы (Сертификаты, Декларации) официально заносятся в Единый реестр ФСА. Легальность 100%";
 
 export type AdvantageTone =
   | "emerald"
