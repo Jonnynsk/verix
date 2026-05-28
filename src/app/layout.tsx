@@ -46,6 +46,10 @@ export const metadata: Metadata = {
     default: SEO_TITLE,
     template: SEO_TITLE_TEMPLATE,
   },
+  verification: {
+    yandex: process.env.YANDEX_VERIFICATION,
+    google: process.env.GOOGLE_VERIFICATION,
+  },
   description: SEO_DESCRIPTION,
   keywords: SEO_KEYWORDS,
   applicationName: SEO_BRAND_NAME,

@@ -20,6 +20,10 @@ import { Reviews } from "@/components/Reviews";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const sameAs = FOOTER_SOCIAL.map((item) => item.href).filter((href) => {
+    return !href.startsWith("/go/");
+  });
+
   const serviceItems = SERVICE_CARDS.map((service) => ({
     "@type": "Service",
     name: service.title,
@@ -39,7 +43,7 @@ export default function Home() {
         url: SEO_CANONICAL_URL,
         email: SITE_EMAIL,
         telephone: PHONE_TEL,
-        sameAs: FOOTER_SOCIAL.map((item) => item.href),
+        ...(sameAs.length ? { sameAs } : {}),
         contactPoint: [
           {
             "@type": "ContactPoint",

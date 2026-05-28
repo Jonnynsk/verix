@@ -26,12 +26,12 @@ export const FOOTER_SOCIAL = [
     icon: "vk" as const,
   },
   {
-    href: "https://t.me/certificate_markeplace",
+    href: "/go/telegram",
     label: "Telegram",
     icon: "telegram" as const,
   },
   {
-    href: "https://wa.me/+79538057999",
+    href: "/go/whatsapp",
     label: "WhatsApp",
     icon: "whatsapp" as const,
   },
