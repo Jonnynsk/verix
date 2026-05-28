@@ -98,14 +98,6 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: SEO_BRAND_NAME,
   },
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/brand-mark.svg", type: "image/svg+xml" },
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: ["/brand-mark.svg"],
-  },
   other: {
     "theme-color": SEO_THEME_COLOR,
     "color-scheme": "light",

@@ -1,6 +1,6 @@
 export const SEO_SITE_NAME = "Сертификационный центр ВЕРИКС";
-export const SEO_SITE_URL = "https://jonnynsk.github.io"; 
-export const SEO_BASE_PATH = "/verix";
+export const SEO_SITE_URL = "https://verix-cert.ru";
+export const SEO_BASE_PATH = "";
 export const SEO_CANONICAL_URL = `${SEO_SITE_URL}${SEO_BASE_PATH}/`;
 
 /** Канонический URL страницы без `//` в пути (учитывает trailingSlash в Next). */

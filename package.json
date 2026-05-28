@@ -1,7 +1,7 @@
 {
   "name": "verix",
   "version": "0.1.0",
-  "homepage": "https://Jonnynsk.github.io/verix/",
+  "homepage": "https://verix-cert.ru/",
   "private": true,
   "scripts": {
     "dev": "next dev",
