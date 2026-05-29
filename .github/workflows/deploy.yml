@@ -26,7 +26,6 @@ jobs:
         run: npm run build
         env:
           YANDEX_VERIFICATION: ${{ secrets.YANDEX_VERIFICATION }}
-          GOOGLE_VERIFICATION: ${{ secrets.GOOGLE_VERIFICATION }}
 
       - name: 🚀 Деплой на сервер по FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

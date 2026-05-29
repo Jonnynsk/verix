@@ -48,7 +48,6 @@ export const metadata: Metadata = {
   },
   verification: {
     yandex: process.env.YANDEX_VERIFICATION,
-    google: process.env.GOOGLE_VERIFICATION,
   },
   description: SEO_DESCRIPTION,
   keywords: SEO_KEYWORDS,
