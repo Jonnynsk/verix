@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-import { PHONE_TEL } from "@/constants/site";
+import { ScrollToAnchorLink } from "@/components/ScrollToAnchorLink";
 
 import { SERVICE_TRTS_HERO } from "./constants";
 
@@ -26,15 +24,12 @@ export function ServiceTrtsHero() {
           <p className={styles.hero__lead}>{SERVICE_TRTS_HERO.lead}</p>
 
           <div className={styles.hero__actions}>
-            <Link className={styles.hero__ctaPrimary} href="#service-trts-lead">
-              {SERVICE_TRTS_HERO.ctaPrimary}
-            </Link>
-            <Link
-              className={styles.hero__ctaSecondary}
-              href={`tel:${PHONE_TEL}`}
+            <ScrollToAnchorLink
+              targetId="social-consult"
+              className={styles.hero__ctaPrimary}
             >
               {SERVICE_TRTS_HERO.ctaSecondary}
-            </Link>
+            </ScrollToAnchorLink>
           </div>
         </div>
       </div>

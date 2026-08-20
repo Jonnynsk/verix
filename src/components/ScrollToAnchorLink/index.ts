@@ -1,0 +1,1 @@
+export { ScrollToAnchorLink } from "./ScrollToAnchorLink";

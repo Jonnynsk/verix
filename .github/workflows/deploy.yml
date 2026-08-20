@@ -9,6 +9,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: 🚚 Получение кода
@@ -28,10 +29,12 @@ jobs:
           YANDEX_VERIFICATION: ${{ secrets.YANDEX_VERIFICATION }}
 
       - name: 🚀 Деплой на сервер по FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: /
+          timeout: 600000
+          log-level: verbose
