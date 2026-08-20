@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { ScrollToAnchorLink } from "@/components/ScrollToAnchorLink";
+import { CONTACT_SECTION_HREF, CONTACT_SECTION_ID } from "@/constants/site";
 
 import { SERVICE_TRTS_DOC_TYPES } from "./constants";
 import { ServiceSection } from "./ServiceSection";
@@ -23,9 +24,13 @@ export function ServiceTrtsDocTypes() {
       </ul>
 
       <p className={styles.docTypes__ctaWrap}>
-        <Link className={styles.docTypes__cta} href="#service-trts-lead">
+        <ScrollToAnchorLink
+          targetId={CONTACT_SECTION_ID}
+          fallbackHref={CONTACT_SECTION_HREF}
+          className={styles.docTypes__cta}
+        >
           {SERVICE_TRTS_DOC_TYPES.cta}
-        </Link>
+        </ScrollToAnchorLink>
       </p>
     </ServiceSection>
   );

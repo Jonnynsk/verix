@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+
+import { HeroVisual, HERO_MAIN_IMAGE_SRC } from "@/components/HeroVisual";
 
 import styles from "./Hero.module.scss";
 
@@ -24,35 +25,30 @@ function ArrowRightIcon() {
   );
 }
 
-function CheckIcon() {
-  return (
-    <svg width={18} height={20} viewBox="0 0 18 20" fill="none" aria-hidden>
-      <path
-        d="M15.5 5.5l-8.2 8.2L3 9.4"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function BoltIcon() {
-  return (
-    <svg width={18} height={20} viewBox="0 0 18 20" fill="none" aria-hidden>
-      <path d="M10 2L4 12h5l-1 6 7-10H10V2z" fill="currentColor" />
-    </svg>
-  );
-}
-
 const STATS = [
   { value: "200+", label: "Компаний" },
   { value: "10+", label: "Лет опыта" },
   { value: "24/7", label: "Поддержка" },
 ] as const;
 
-const heroImageSrc = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero/hero-main.jpg`;
+const HERO_FLOATS = [
+  {
+    id: "cert",
+    tone: "green",
+    icon: "check",
+    title: "Сертифицировано",
+    subtitle: "ГОСТ Р",
+    position: "primary",
+  },
+  {
+    id: "speed",
+    tone: "gradient",
+    icon: "bolt",
+    title: "Быстро",
+    subtitle: "От 1 рабочего дня",
+    position: "secondary",
+  },
+] as const;
 
 export function Hero() {
   return (
@@ -85,7 +81,7 @@ export function Hero() {
               Бесплатная консультация
               <ArrowRightIcon />
             </a>
-            <Link className={styles.hero__ctaSecondary} href="/#services">
+            <Link className={styles.hero__ctaSecondary} href="/services">
               Все услуги
             </Link>
           </div>
@@ -100,47 +96,12 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className={styles.hero__visual}>
-          <div className={styles.hero__blob} aria-hidden />
-          <div className={styles.hero__blobSecondary} aria-hidden />
-          <div className={styles.hero__card}>
-            <div className={styles.hero__imageWrap}>
-              <Image
-                className={styles.hero__image}
-                src={heroImageSrc}
-                alt="Специалисты центра сертификации за работой"
-                fill
-                sizes="(min-width: 1024px) 492px, 100vw"
-                priority
-              />
-            </div>
-
-            <div className={`${styles.hero__float} ${styles.hero__float_cert}`}>
-              <span className={styles.hero__floatIcon} data-tone="green">
-                <CheckIcon />
-              </span>
-              <div className={styles.hero__floatText}>
-                <p className={styles.hero__floatTitle}>Сертифицировано</p>
-                <p className={styles.hero__floatSub}>ГОСТ Р</p>
-              </div>
-            </div>
-
-            <div
-              className={`${styles.hero__float} ${styles.hero__float_speed}`}
-            >
-              <span className={styles.hero__floatIcon} data-tone="gradient">
-                <BoltIcon />
-              </span>
-              <div className={styles.hero__floatText}>
-                <p className={styles.hero__floatTitle}>Быстро</p>
-                <p className={styles.hero__floatSub}>От 1 рабочего дня</p>
-              </div>
-            </div>
-
-            <div className={styles.hero__decorDot} aria-hidden />
-            <div className={styles.hero__decorDotSecondary} aria-hidden />
-          </div>
-        </div>
+        <HeroVisual
+          imageSrc={HERO_MAIN_IMAGE_SRC}
+          imageAlt="Специалисты центра сертификации за работой"
+          floats={HERO_FLOATS}
+          priority
+        />
       </div>
     </section>
   );

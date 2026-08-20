@@ -47,6 +47,12 @@ export default function SertifikaciyaTrTsPage() {
           {
             "@type": "ListItem",
             position: 2,
+            name: "Услуги",
+            item: seoPathUrl("services"),
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
             name: "Сертификация ТР ТС",
             item: pageUrl,
           },

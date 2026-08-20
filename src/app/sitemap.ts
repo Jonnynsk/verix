@@ -13,7 +13,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: seoPathUrl("services"),
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
       url: seoPathUrl("services/sertifikaciya-tr-ts"),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: seoPathUrl("services/otkaznie-pisma"),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,

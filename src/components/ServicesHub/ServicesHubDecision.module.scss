@@ -1,0 +1,66 @@
+@use "../../styles" as *;
+
+.decision {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: $space-9 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $space-5;
+    padding-block: $space-6;
+    border-bottom: 1px solid $color-slate-200;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: $radius-full;
+    font-size: $font-size-body;
+    font-weight: 600;
+    color: $color-cyan-800;
+    background: $color-cyan-50;
+    border: 1px solid $color-cyan-200;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    min-width: 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    font-weight: 600;
+    color: $color-slate-900;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-600;
+  }
+}
