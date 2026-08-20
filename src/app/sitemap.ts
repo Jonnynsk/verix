@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: seoPathUrl("services/sertifikaciya-tr-ts"),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: seoPathUrl("privacy"),
       lastModified: new Date(),
       changeFrequency: "yearly",

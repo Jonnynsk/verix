@@ -33,6 +33,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
   description: string;
   tone: ServiceTone;
   icon: ServiceIconId;
+  href?: string;
 }> = [
   {
     anchor: "service-trts",
@@ -41,6 +42,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
       "Обязательное подтверждение соответствия продукции требованиям технических регламентов",
     tone: "blue",
     icon: "shieldCheck",
+    href: "/services/sertifikaciya-tr-ts",
   },
   {
     anchor: "service-gost",
