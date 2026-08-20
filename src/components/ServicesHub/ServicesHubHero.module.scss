@@ -1,0 +1,80 @@
+@use "../../styles" as *;
+
+.hero {
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: $page-padding-x-mobile;
+  padding-block: $space-10 $space-11;
+  background: $color-white;
+  scroll-margin-top: 96px;
+
+  @media (min-width: $bp-md) {
+    padding-inline: $page-padding-x-tablet;
+    padding-block: $space-12 $space-13;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding-inline: $page-padding-x-wide;
+    padding-block: $space-13 $section-padding-y-md;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $space-10;
+
+    @media (min-width: $bp-lg) {
+      flex-direction: row;
+      align-items: center;
+      gap: $space-12;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+    max-width: 100%;
+
+    @media (min-width: $bp-lg) {
+      flex: 0 0 576px;
+      max-width: 576px;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: $font-weight-regular;
+    color: $color-cyan-600;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-wrap: balance;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    color: $color-slate-600;
+    text-wrap: pretty;
+  }
+}

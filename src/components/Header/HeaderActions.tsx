@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ScrollToAnchorLink } from "@/components/ScrollToAnchorLink";
 
 import { PHONE_DISPLAY, PHONE_TEL } from "./constants";
 import { PhoneIcon } from "./PhoneIcon";
@@ -29,13 +29,14 @@ export function HeaderActions({
           {PHONE_DISPLAY}
         </a>
       </div>
-      <Link
-        href="/#social-consult"
+      <ScrollToAnchorLink
+        targetId="social-consult"
+        fallbackHref="/#social-consult"
         className={styles.headerActions__consult}
-        onClick={onConsultClick}
+        onNavigate={onConsultClick}
       >
         Консультация
-      </Link>
+      </ScrollToAnchorLink>
     </div>
   );
 }

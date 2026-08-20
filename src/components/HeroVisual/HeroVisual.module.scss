@@ -1,0 +1,224 @@
+@use "../../styles" as *;
+
+$green-500: #22c55e;
+
+.visual {
+  position: relative;
+  box-sizing: border-box;
+  flex: none;
+  width: 100%;
+  min-width: 0;
+  max-width: 576px;
+  margin-inline: auto;
+
+  @media (min-width: $bp-lg) {
+    flex: 0 0 576px;
+    width: 576px;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  &__blob {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      position: absolute;
+      left: -8%;
+      top: -10%;
+      width: 112%;
+      height: 120%;
+      border-radius: $radius-xl;
+      background: $gradient-primary-cta;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  }
+
+  &__blobSecondary {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      position: absolute;
+      right: -5%;
+      bottom: -8%;
+      width: 128px;
+      height: 128px;
+      border-radius: $radius-lg;
+      background: $color-blue-500;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  }
+
+  &__card {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: clamp(24px, 5vw, 42px);
+    background: $color-white;
+    border: 2px solid $color-slate-100;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-xs;
+
+    @media (min-width: $bp-lg) {
+      box-shadow: $shadow-elevated;
+    }
+  }
+
+  &__imageWrap {
+    position: relative;
+    width: 100%;
+    max-width: 492px;
+    margin-inline: auto;
+    aspect-ratio: 492 / 320;
+    border-radius: $radius-lg;
+    outline: 4px solid $color-white;
+    outline-offset: 0;
+    box-shadow: $shadow-xs;
+    overflow: hidden;
+
+    @media (min-width: $bp-lg) {
+      box-shadow: $shadow-elevated;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+
+  &__float {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: flex;
+      align-items: center;
+      gap: $space-5;
+      position: absolute;
+      z-index: 2;
+      padding: 22px;
+      background: $color-white;
+      border: 2px solid $color-cyan-100;
+      border-radius: $radius-lg;
+      box-shadow: $shadow-elevated;
+      animation: hero-visual-float-y 2s ease-in-out infinite;
+    }
+
+    &_primary {
+      left: -6%;
+      top: 8%;
+    }
+
+    &_secondary {
+      right: -4%;
+      bottom: 18%;
+      width: max-content;
+      max-width: calc(100% - 16px);
+      animation-delay: -2.1s;
+    }
+
+    @media (max-width: calc($bp-2xl - 1px)) {
+      &_secondary {
+        left: -6%;
+        right: auto;
+        top: auto;
+        bottom: 8%;
+        animation-delay: -2.1s;
+      }
+    }
+  }
+
+  &__floatIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    padding: 14px 15px;
+    border-radius: $radius-md;
+    color: $color-white;
+
+    &[data-tone="green"] {
+      background: $green-500;
+    }
+
+    &[data-tone="gradient"] {
+      background: $gradient-primary-cta;
+    }
+
+    &[data-tone="amber"] {
+      background: linear-gradient(135deg, $color-amber-500, $color-amber-600);
+    }
+  }
+
+  &__floatText {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  &__floatTitle {
+    margin: 0;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee-loose;
+    font-weight: $font-weight-regular;
+    color: $color-slate-900;
+  }
+
+  &__floatSub {
+    margin: 0;
+    font-size: $font-size-caption;
+    line-height: $line-height-caption;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+  }
+
+  &__decorDot {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      position: absolute;
+      top: -7%;
+      right: -5%;
+      width: 128px;
+      height: 128px;
+      border-radius: $radius-lg;
+      background: $gradient-primary-cta;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  }
+
+  &__decorDotSecondary {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      position: absolute;
+      left: -5%;
+      bottom: -7%;
+      width: 128px;
+      height: 128px;
+      border-radius: $radius-lg;
+      background: $color-blue-500;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  }
+}
+
+@keyframes hero-visual-float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}

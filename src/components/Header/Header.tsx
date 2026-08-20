@@ -4,7 +4,8 @@ import { useCallback, useEffect, useId, useState } from "react";
 import { NAV_ITEMS } from "./constants";
 import { HeaderActions } from "./HeaderActions";
 import { HeaderLogo } from "./HeaderLogo";
-import { HeaderNav } from "./HeaderNav";
+import { HeaderNavDesktop } from "./HeaderNavDesktop";
+import { HeaderNavMobile } from "./HeaderNavMobile";
 
 import styles from "./Header.module.scss";
 
@@ -54,7 +55,7 @@ export function Header() {
         <div className={styles["header__bar"]}>
           <HeaderLogo />
           <div className={styles["header__nav--desktop"]}>
-            <HeaderNav items={NAV_ITEMS} variant="horizontal" />
+            <HeaderNavDesktop items={NAV_ITEMS} />
           </div>
           <div className={styles["header__actions--desktop"]}>
             <HeaderActions variant="inline" />
@@ -82,11 +83,7 @@ export function Header() {
               className={styles["header__mobile-content"]}
               inert={menuOpen ? undefined : true}
             >
-              <HeaderNav
-                items={NAV_ITEMS}
-                variant="stacked"
-                onNavigate={closeMenu}
-              />
+              <HeaderNavMobile items={NAV_ITEMS} onNavigate={closeMenu} />
               <HeaderActions
                 variant="stacked"
                 onConsultClick={closeMenu}

@@ -59,6 +59,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
       "Оформим отказное письмо для Wildberries, Ozon, Яндекс Маркета. Подходит для ИП и самозанятых",
     tone: "amber",
     icon: "mail",
+    href: "/services/otkaznie-pisma",
   },
   {
     anchor: "service-honest",
