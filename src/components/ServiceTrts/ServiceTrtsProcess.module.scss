@@ -1,0 +1,86 @@
+@use "../../styles" as *;
+
+.process {
+  &__steps {
+    list-style: none;
+    margin: $space-9 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $space-7;
+
+    @media (min-width: $bp-lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-8;
+    }
+  }
+
+  &__step {
+    display: flex;
+    gap: $space-5;
+    align-items: flex-start;
+  }
+
+  &__marker {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: $font-size-lead;
+    font-weight: 600;
+    color: $color-cyan-700;
+    background: $color-cyan-50;
+    border: 2px solid $color-cyan-200;
+    border-radius: $radius-md;
+  }
+
+  &__stepBody {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__stepTitle {
+    margin: 0;
+    font-size: $font-size-footer-heading;
+    line-height: $line-height-footer-heading;
+    font-weight: 600;
+    color: $color-slate-900;
+  }
+
+  &__stepText {
+    margin: $space-3 0 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-600;
+  }
+
+  &__docs {
+    margin-top: $space-11;
+    padding: $space-8;
+    background: $color-slate-50;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-lg;
+  }
+
+  &__docsTitle {
+    margin: 0;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    font-weight: 600;
+    color: $color-slate-900;
+  }
+
+  &__docsList {
+    margin: $space-5 0 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    color: $color-slate-700;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+  }
+}

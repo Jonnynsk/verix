@@ -1,0 +1,130 @@
+@use "../../styles" as *;
+
+.hero {
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: $page-padding-x-mobile;
+  padding-block: $space-10 $space-11;
+  background: $color-white;
+  scroll-margin-top: 96px;
+
+  @media (min-width: $bp-md) {
+    padding-inline: $page-padding-x-tablet;
+    padding-block: $space-12 $space-13;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding-inline: $page-padding-x-wide;
+    padding-block: $space-13 $section-padding-y-md;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-7;
+    max-width: 48rem;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__badge {
+    padding: $space-2 $space-4;
+    font-size: $font-size-marquee;
+    line-height: 1.4;
+    color: $color-cyan-800;
+    background: $color-cyan-50;
+    border: 1px solid $color-cyan-200;
+    border-radius: $radius-full;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(1.875rem, 5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-wrap: balance;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: $font-size-lead;
+    line-height: 1.65;
+    color: $color-slate-600;
+    text-wrap: balance;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-5;
+    margin-top: $space-3;
+  }
+
+  &__ctaPrimary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: $space-5 $space-9;
+    font-size: $font-size-body;
+    font-weight: 600;
+    color: $color-white;
+    text-decoration: none;
+    background: $gradient-primary-cta;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-xs;
+    transition: filter 0.15s ease;
+
+    &:hover {
+      filter: brightness(1.03);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-600;
+      outline-offset: 3px;
+    }
+  }
+
+  &__ctaSecondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: $space-5 $space-9;
+    font-size: $font-size-body;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-decoration: none;
+    background: $color-white;
+    border: 2px solid $color-gray-200;
+    border-radius: $radius-lg;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease;
+
+    &:hover {
+      background: $color-slate-50;
+      border-color: $color-slate-400;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-600;
+      outline-offset: 3px;
+    }
+  }
+}
