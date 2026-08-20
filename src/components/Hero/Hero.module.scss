@@ -58,33 +58,6 @@ $green-500: #22c55e;
     }
   }
 
-  &__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: $space-3;
-    align-self: flex-start;
-    margin: 0;
-    padding: 12px 20px 13px 22px;
-    font-size: $font-size-marquee;
-    line-height: $line-height-marquee-loose;
-    letter-spacing: -0.03571em;
-    font-weight: $font-weight-regular;
-    color: $color-cyan-700;
-    background: $color-white;
-    border: 2px solid $color-cyan-200;
-    border-radius: $radius-full;
-    box-shadow: $shadow-xs;
-  }
-
-  &__badgeDot {
-    flex-shrink: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: $color-cyan-500;
-    opacity: 0.82;
-  }
-
   &__title {
     margin: 0;
     font-size: clamp(2.25rem, 6.5vw, $hero-title-max);

@@ -55,10 +55,6 @@ export function Hero() {
     <section id="consult" className={styles.hero} aria-labelledby="hero-title">
       <div className={styles.hero__inner}>
         <div className={styles.hero__content}>
-          <p className={styles.hero__badge}>
-            <span className={styles.hero__badgeDot} aria-hidden />
-            <span>Аккредитованный центр сертификации</span>
-          </p>
 
           <h1 id="hero-title" className={styles.hero__title}>
             <span className={styles.hero__titleLine}>
