@@ -9,6 +9,7 @@ export const LEGAL_ENTITY = {
   shortName: "ИП Файзрахманов Е. В.",
   inn: "540539897005",
   ogrnip: "326547600156291",
+  address: SITE_ADDRESS,
 } as const;
 
 /** Якорь блока контактов (SocialCta) на страницах сайта */
