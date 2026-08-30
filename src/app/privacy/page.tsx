@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className={styles.privacy}>
+    <div className={styles.privacy}>
       <div className={styles.privacy__inner}>
         <article className={styles.privacy__article}>
           <h1 className={styles.privacy__title}>
@@ -733,6 +733,6 @@ export default function PrivacyPage() {
           </section>
         </article>
       </div>
-    </main>
+    </div>
   );
 }

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className={styles.privacy}>
+    <div className={styles.privacy}>
       <div className={styles.privacy__inner}>
         <article className={styles.privacy__article}>
           <h1 className={styles.privacy__title}>Пользовательское соглашение</h1>
@@ -172,6 +172,6 @@ export default function TermsPage() {
           </section>
         </article>
       </div>
-    </main>
+    </div>
   );
 }
