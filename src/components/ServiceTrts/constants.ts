@@ -105,7 +105,7 @@ export const SERVICE_TRTS_LEAD = {
   title: "Остались вопросы по сертификации?",
   text: "Оставьте заявку — профильный специалист разберёт ваш кейс за 15 минут и назовёт точную стоимость без обязательств.",
   consentLabel: "Даю согласие на обработку персональных данных",
-  consentHref: "/consent",
+  consentHref: "/privacy",
   submitLabel: "Отправить заявку",
 } as const;
 

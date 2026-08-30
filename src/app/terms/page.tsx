@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 
+import { LEGAL_ENTITY, SITE_EMAIL } from "@/constants/site";
+import { SEO_SITE_NAME } from "@/constants/seo";
+
 import styles from "../privacy/privacy.module.scss";
 
 export const metadata: Metadata = {
@@ -20,8 +23,8 @@ export default function TermsPage() {
             <ol className={styles.privacy__list}>
               <li>
                 1.1. Настоящее Пользовательское соглашение (далее — Соглашение)
-                относится к веб-сайту «Сертификационный центр ВЕРИКС» (далее —
-                Веб-сайт), расположенному по адресу{" "}
+                относится к веб-сайту «{SEO_SITE_NAME}» (далее — Веб-сайт),
+                расположенному по адресу{" "}
                 <a
                   className={styles.privacy__link}
                   href="https://verix-cert.ru"
@@ -31,16 +34,28 @@ export default function TermsPage() {
                 .
               </li>
               <li>
-                1.2. Использование Веб-сайта означает согласие Пользователя с
+                1.2. Владелец и администрация Веб-сайта: {LEGAL_ENTITY.name},
+                ИНН {LEGAL_ENTITY.inn}, ОГРНИП {LEGAL_ENTITY.ogrnip}, адрес:{" "}
+                {LEGAL_ENTITY.address}. Контакт:{" "}
+                <a
+                  className={styles.privacy__link}
+                  href={`mailto:${SITE_EMAIL}`}
+                >
+                  {SITE_EMAIL}
+                </a>
+                .
+              </li>
+              <li>
+                1.3. Использование Веб-сайта означает согласие Пользователя с
                 настоящим Соглашением и условиями использования материалов и
                 сервисов Веб-сайта.
               </li>
               <li>
-                1.3. Если Пользователь не согласен с условиями Соглашения, он
+                1.4. Если Пользователь не согласен с условиями Соглашения, он
                 обязан немедленно прекратить использование Веб-сайта.
               </li>
               <li>
-                1.4. Администрация Веб-сайта оставляет за собой право в любое
+                1.5. Администрация Веб-сайта оставляет за собой право в любое
                 время изменять, добавлять или удалять пункты настоящего
                 Соглашения без предварительного уведомления Пользователя.
               </li>

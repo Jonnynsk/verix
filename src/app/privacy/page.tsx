@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 
+import {
+  LEGAL_ENTITY,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  SITE_EMAIL,
+} from "@/constants/site";
+import { SEO_SITE_NAME } from "@/constants/seo";
+
 import styles from "./privacy.module.scss";
 
 export const metadata: Metadata = {
@@ -25,7 +33,8 @@ export default function PrivacyPage() {
               152-ФЗ «О персональных данных» (далее — Закон о персональных
               данных) и определяет порядок обработки персональных данных и меры
               по обеспечению безопасности персональных данных, предпринимаемые
-              Сертификационным центром ВЕРИКС (далее — Оператор).
+              Оператором — {LEGAL_ENTITY.name}, осуществляющим деятельность под
+              коммерческим обозначением «{SEO_SITE_NAME}».
             </p>
             <ol className={styles.privacy__list}>
               <li>
@@ -44,6 +53,62 @@ export default function PrivacyPage() {
                   https://verix-cert.ru
                 </a>
                 .
+              </li>
+              <li>
+                1.3. Сведения об Операторе персональных данных:
+                <dl
+                  className={styles.privacy__requisites}
+                  aria-label="Реквизиты Оператора"
+                >
+                  <div className={styles.privacy__requisite}>
+                    <dt className={styles.privacy__requisiteLabel}>
+                      Наименование
+                    </dt>
+                    <dd className={styles.privacy__requisiteValue}>
+                      {LEGAL_ENTITY.name}
+                    </dd>
+                  </div>
+                  <div className={styles.privacy__requisite}>
+                    <dt className={styles.privacy__requisiteLabel}>ИНН</dt>
+                    <dd className={styles.privacy__requisiteValue}>
+                      {LEGAL_ENTITY.inn}
+                    </dd>
+                  </div>
+                  <div className={styles.privacy__requisite}>
+                    <dt className={styles.privacy__requisiteLabel}>ОГРНИП</dt>
+                    <dd className={styles.privacy__requisiteValue}>
+                      {LEGAL_ENTITY.ogrnip}
+                    </dd>
+                  </div>
+                  <div className={styles.privacy__requisite}>
+                    <dt className={styles.privacy__requisiteLabel}>Адрес</dt>
+                    <dd className={styles.privacy__requisiteValue}>
+                      {LEGAL_ENTITY.address}
+                    </dd>
+                  </div>
+                  <div className={styles.privacy__requisite}>
+                    <dt className={styles.privacy__requisiteLabel}>Email</dt>
+                    <dd className={styles.privacy__requisiteValue}>
+                      <a
+                        className={styles.privacy__link}
+                        href={`mailto:${SITE_EMAIL}`}
+                      >
+                        {SITE_EMAIL}
+                      </a>
+                    </dd>
+                  </div>
+                  <div className={styles.privacy__requisite}>
+                    <dt className={styles.privacy__requisiteLabel}>Телефон</dt>
+                    <dd className={styles.privacy__requisiteValue}>
+                      <a
+                        className={styles.privacy__link}
+                        href={`tel:${PHONE_TEL}`}
+                      >
+                        {PHONE_DISPLAY}
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
               </li>
             </ol>
           </section>
@@ -510,9 +575,9 @@ export default function PrivacyPage() {
                 Оператора{" "}
                 <a
                   className={styles.privacy__link}
-                  href="mailto:verix-cert@mail.ru"
+                  href={`mailto:${SITE_EMAIL}`}
                 >
-                  verix-cert@mail.ru
+                  {SITE_EMAIL}
                 </a>{" "}
                 с пометкой «Актуализация персональных данных».
               </li>
@@ -526,9 +591,9 @@ export default function PrivacyPage() {
                 электронный адрес Оператора{" "}
                 <a
                   className={styles.privacy__link}
-                  href="mailto:verix-cert@mail.ru"
+                  href={`mailto:${SITE_EMAIL}`}
                 >
-                  verix-cert@mail.ru
+                  {SITE_EMAIL}
                 </a>{" "}
                 с пометкой «Отзыв согласия на обработку персональных данных».
               </li>
@@ -642,9 +707,9 @@ export default function PrivacyPage() {
                 данных, обратившись к Оператору с помощью электронной почты{" "}
                 <a
                   className={styles.privacy__link}
-                  href="mailto:verix-cert@mail.ru"
+                  href={`mailto:${SITE_EMAIL}`}
                 >
-                  verix-cert@mail.ru
+                  {SITE_EMAIL}
                 </a>
                 .
               </li>

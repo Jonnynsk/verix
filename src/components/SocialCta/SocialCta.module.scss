@@ -108,18 +108,6 @@
     white-space: nowrap;
   }
 
-  &__warning {
-    margin: 0;
-    max-width: 48rem;
-    font-size: $font-size-caption;
-    line-height: $line-height-caption;
-    letter-spacing: $tracking-caption;
-    font-weight: $font-weight-regular;
-    color: $color-white-90;
-    text-align: center;
-    text-wrap: balance;
-  }
-
   @media (min-width: $bp-md) {
     padding-block: $space-12;
     &__inner {

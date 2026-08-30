@@ -169,10 +169,66 @@
   &__bottom {
     display: flex;
     flex-direction: column;
-    gap: $space-7;
-    margin-top: $gap-section;
+    gap: $space-8;
     padding-top: 42px;
     border-top: 2px solid $color-border-marquee;
+  }
+
+  &__requisites {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    max-width: 48rem;
+  }
+
+  &__requisite {
+    display: grid;
+    grid-template-columns: minmax(6.5rem, 8.5rem) minmax(0, 1fr);
+    gap: $space-4 $space-6;
+    padding-block: $space-4;
+    border-bottom: 1px solid color-mix(in srgb, $color-border-marquee 70%, transparent);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: calc($bp-md - 1px)) {
+      grid-template-columns: 1fr;
+      gap: $space-2;
+    }
+  }
+
+  &__requisiteLabel {
+    margin: 0;
+    font-size: $font-size-caption;
+    line-height: $line-height-caption;
+    letter-spacing: $tracking-caption;
+    font-weight: $font-weight-regular;
+    color: $color-slate-500;
+  }
+
+  &__requisiteValue {
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-200;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: $space-7;
+    padding-top: $space-7;
+    border-top: 1px solid color-mix(in srgb, $color-border-marquee 70%, transparent);
 
     @media (min-width: $bp-md) {
       flex-direction: row;
@@ -185,7 +241,7 @@
 
   &__copyright {
     margin: 0;
-    max-width: 31.25rem;
+    max-width: 36rem;
     font-size: $font-size-body;
     line-height: $line-height-body;
     letter-spacing: $tracking-tight-md;

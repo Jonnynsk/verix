@@ -102,5 +102,49 @@
       border-radius: $radius-sm;
     }
   }
+
+  &__requisites {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: $space-5 0 0;
+    padding: 0;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-md;
+    background: $color-slate-50;
+    overflow: hidden;
+  }
+
+  &__requisite {
+    display: grid;
+    grid-template-columns: minmax(7rem, 9rem) minmax(0, 1fr);
+    gap: $space-3 $space-5;
+    padding: $space-4 $space-5;
+    border-bottom: 1px solid $color-slate-200;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: calc($bp-md - 1px)) {
+      grid-template-columns: 1fr;
+      gap: $space-1;
+    }
+  }
+
+  &__requisiteLabel {
+    margin: 0;
+    font-size: $font-size-caption;
+    line-height: $line-height-caption;
+    letter-spacing: $tracking-caption;
+    color: $color-slate-500;
+  }
+
+  &__requisiteValue {
+    margin: 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    color: $color-slate-800;
+  }
 }
 
