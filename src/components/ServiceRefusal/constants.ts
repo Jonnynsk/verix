@@ -81,6 +81,6 @@ export const SERVICE_REFUSAL_LEAD = {
   productLabel: "Ссылка на товар или описание",
   productPlaceholder: "URL карточки WB/Ozon или краткое описание товара",
   consentLabel: "Даю согласие на обработку персональных данных",
-  consentHref: "/consent",
+  consentHref: "/privacy",
   submitLabel: "Получить расчёт",
 } as const;

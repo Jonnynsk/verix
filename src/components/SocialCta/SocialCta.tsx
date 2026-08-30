@@ -56,9 +56,6 @@ function SocialIcon({ name }: { name: SocialIconName }) {
   }
 }
 
-const PRIVACY_WARNING =
-  "Настоящий сайт не предназначен для сбора, хранения и обработки персональных данных пользователей. Функционал сайта носит исключительно информационный характер";
-
 const CTA_TITLE = "Готовы начать работу с ВЕРИКС?";
 const CTA_SUBTITLE =
   "Получите бесплатную консультацию эксперта и расчет стоимости прямо сейчас";
@@ -91,8 +88,6 @@ export function SocialCta() {
             </a>
           ))}
         </div>
-
-        <p className={styles.socialCta__warning}>{PRIVACY_WARNING}</p>
       </div>
     </section>
   );

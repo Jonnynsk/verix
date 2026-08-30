@@ -1,5 +1,6 @@
 import { HeaderLogo } from "@/components/Header/HeaderLogo";
 import {
+  LEGAL_ENTITY,
   PHONE_DISPLAY,
   PHONE_TEL,
   SITE_ADDRESS,
@@ -152,21 +153,44 @@ export function Footer() {
         </div>
 
         <div className={styles.footer__bottom}>
-          <p className={styles.footer__copyright}>
+          <dl className={styles.footer__requisites} aria-label="Реквизиты">
+            <div className={styles.footer__requisite}>
+              <dt className={styles.footer__requisiteLabel}>Наименование</dt>
+              <dd className={styles.footer__requisiteValue}>
+                {LEGAL_ENTITY.name}
+              </dd>
+            </div>
+            <div className={styles.footer__requisite}>
+              <dt className={styles.footer__requisiteLabel}>ИНН</dt>
+              <dd className={styles.footer__requisiteValue}>
+                {LEGAL_ENTITY.inn}
+              </dd>
+            </div>
+            <div className={styles.footer__requisite}>
+              <dt className={styles.footer__requisiteLabel}>ОГРНИП</dt>
+              <dd className={styles.footer__requisiteValue}>
+                {LEGAL_ENTITY.ogrnip}
+              </dd>
+            </div>
+          </dl>
+
+          <div className={styles.footer__meta}>
+            <p className={styles.footer__copyright}>
             © {year} Сертификационный центр ВЕРИКС. Все права защищены.
-          </p>
-          <ul className={styles.footer__legal}>
-            {FOOTER_LEGAL.map((item) => (
-              <li key={item.href}>
-                <FooterLink
-                  className={styles.footer__legalLink}
-                  href={item.href}
-                >
-                  {item.label}
-                </FooterLink>
-              </li>
-            ))}
-          </ul>
+            </p>
+            <ul className={styles.footer__legal}>
+              {FOOTER_LEGAL.map((item) => (
+                <li key={item.href}>
+                  <FooterLink
+                    className={styles.footer__legalLink}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </FooterLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
