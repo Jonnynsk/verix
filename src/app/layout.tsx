@@ -120,7 +120,7 @@ export default function RootLayout({
     >
       <body>
         <Header />
-        {children}
+        <main id="main-content">{children}</main>
         <Footer />
         <CookieConsent privacyHref="/privacy" />
       </body>
