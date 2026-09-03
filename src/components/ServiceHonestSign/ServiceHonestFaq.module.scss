@@ -1,0 +1,49 @@
+@use "../../styles" as *;
+
+.faq {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    margin-top: $space-9;
+  }
+
+  &__item {
+    background: $color-white;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-lg;
+    overflow: hidden;
+  }
+
+  &__question {
+    padding: $space-5 $space-6;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+    font-weight: 600;
+    color: $color-slate-900;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::marker {
+      content: "";
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-600;
+      outline-offset: -2px;
+    }
+  }
+
+  &__answer {
+    margin: 0;
+    padding: $space-4 $space-6 $space-5;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-600;
+    border-top: 1px solid $color-slate-100;
+  }
+}

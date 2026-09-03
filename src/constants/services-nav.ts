@@ -1,4 +1,3 @@
-/** Ссылки на опубликованные лендинги услуг — источник для хедера, футера и hub. */
 export const NAV_SERVICE_LINKS = [
   {
     href: "/services/sertifikaciya-tr-ts",
@@ -7,6 +6,10 @@ export const NAV_SERVICE_LINKS = [
   {
     href: "/services/otkaznie-pisma",
     label: "Отказные письма",
+  },
+  {
+    href: "/services/chestny-znak",
+    label: "Честный знак",
   },
 ] as const;
 

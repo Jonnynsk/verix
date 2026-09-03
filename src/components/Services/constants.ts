@@ -68,6 +68,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
       "Помощь в регистрации и маркировке товаров в национальной системе прослеживаемости",
     tone: "honest",
     icon: "markHonest",
+    href: "/services/chestny-znak",
   },
   {
     anchor: "service-sgr",

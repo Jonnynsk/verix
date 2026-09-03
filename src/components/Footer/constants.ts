@@ -5,7 +5,7 @@ export const FOOTER_SERVICES = [
   { href: "/services/sertifikaciya-tr-ts", label: "Сертификация ТР ТС" },
   { href: "#service-gost", label: "Декларирование ГОСТ Р" },
   { href: "/services/otkaznie-pisma", label: "Отказные письма" },
-  { href: "#service-honest", label: "Честный знак" },
+  { href: "/services/chestny-znak", label: "Честный знак" },
   { href: "#service-sgr", label: "Свидетельства СГР" },
   { href: "#service-tu", label: "Разработка ТУ" },
   { href: "#service-expert", label: "Экспертные заключения" },

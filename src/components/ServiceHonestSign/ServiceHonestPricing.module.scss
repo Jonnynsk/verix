@@ -1,0 +1,71 @@
+@use "../../styles" as *;
+
+.pricing {
+  &__tableWrap {
+    margin-top: $space-9;
+    overflow-x: auto;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-lg;
+    background: $color-white;
+    box-shadow: $shadow-xs;
+  }
+
+  &__caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  &__table {
+    width: 100%;
+    min-width: 40rem;
+    border-collapse: collapse;
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+
+    th,
+    td {
+      padding: $space-5 $space-6;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid $color-slate-200;
+    }
+
+    th {
+      font-weight: 600;
+      color: $color-slate-900;
+      background: $color-slate-50;
+    }
+
+    td {
+      color: $color-slate-700;
+    }
+
+    tbody tr:last-child {
+      th,
+      td {
+        border-bottom: none;
+      }
+    }
+
+    td:last-child {
+      font-weight: 600;
+      color: #b45309;
+      white-space: nowrap;
+    }
+  }
+
+  &__note {
+    margin: $space-7 0 0;
+    max-width: 52rem;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-600;
+  }
+}
