@@ -1,0 +1,100 @@
+@use "../../styles" as *;
+
+.categories {
+  &__text {
+    margin: $space-7 0 0;
+    max-width: 52rem;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-700;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-4;
+    list-style: none;
+    margin: $space-9 0 0;
+    padding: 0;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $bp-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-4;
+    padding: $space-5 $space-6;
+    background: $color-white;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-xs;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    color: #92400e;
+    background: $color-amber-50;
+    border: 1px solid #fde68a;
+    border-radius: $radius-md;
+  }
+
+  &__label {
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-700;
+  }
+
+  &__note {
+    margin: $space-8 0 0;
+    max-width: 52rem;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-600;
+    font-style: italic;
+  }
+
+  &__ctaWrap {
+    margin: $space-9 0 0;
+    text-align: center;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: $space-4 $space-8;
+    font-size: $font-size-body;
+    font-weight: 600;
+    color: #92400e;
+    text-decoration: none;
+    background: $color-amber-50;
+    border: 1px solid #fde68a;
+    border-radius: $radius-lg;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease;
+
+    &:hover {
+      background: #fef3c7;
+      border-color: $color-amber-500;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-600;
+      outline-offset: 3px;
+    }
+  }
+}

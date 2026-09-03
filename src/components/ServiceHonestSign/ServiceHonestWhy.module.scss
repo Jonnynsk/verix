@@ -1,0 +1,15 @@
+@use "../../styles" as *;
+
+.why {
+  &__text {
+    margin: $space-7 0 0;
+    max-width: 52rem;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-700;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
