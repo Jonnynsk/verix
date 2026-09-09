@@ -23,6 +23,10 @@ export const NAV_SERVICE_LINKS = [
     href: "/services/razrabotka-tu",
     label: "Разработка ТУ",
   },
+  {
+    href: "/services/dobrovolnaya-sertifikaciya",
+    label: "Добровольная сертификация",
+  },
 ] as const;
 
 export const SERVICES_HUB_PATH = "/services";

@@ -90,10 +90,10 @@ export const SERVICE_CARDS: ReadonlyArray<{
     href: "/services/razrabotka-tu",
   },
   {
-    anchor: "service-expert",
-    title: "Экспертные заключения",
+    anchor: "service-tmz",
+    title: "Регистрация товарного знака",
     description:
-      "Заключения Роспотребнадзора о соответствии санитарно-эпидемиологическим нормам",
+      "Официальная защита названия и логотипа в Роспатенте для безопасных продаж на маркетплейсах",
     tone: "indigo",
     icon: "scale",
   },
@@ -103,5 +103,6 @@ export const SERVICE_CARDS: ReadonlyArray<{
     description: "Подтверждение определённых характеристик продукции и услуг",
     tone: "emerald",
     icon: "fileCheck",
+    href: "/services/dobrovolnaya-sertifikaciya",
   },
 ];
