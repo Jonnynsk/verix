@@ -5,7 +5,7 @@ export const MARQUEE_ITEMS = [
   { label: "Честный знак", icon: "honest" },
   { label: "Свидетельства СГР", icon: "lab" },
   { label: "Разработка ТУ", icon: "tu" },
-  { label: "Экспертные заключения", icon: "scale" },
+  { label: "Регистрация товарного знака", icon: "scale" },
   { label: "Добровольная сертификация", icon: "volDoc" },
 ] as const;
 

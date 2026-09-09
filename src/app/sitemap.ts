@@ -43,6 +43,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: seoPathUrl("services/dobrovolnaya-sertifikaciya"),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: seoPathUrl("services/razrabotka-tu"),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: seoPathUrl("services/sgr"),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: seoPathUrl("privacy"),
       lastModified: new Date(),
       changeFrequency: "yearly",
