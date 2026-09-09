@@ -44,9 +44,9 @@
     padding: $space-2 $space-4;
     font-size: $font-size-marquee;
     line-height: 1.4;
-    color: $color-amber-600;
-    background: $color-amber-50;
-    border: 1px solid $color-amber-100;
+    color: $color-white;
+    background: $gradient-icon-amber;
+    box-shadow: $shadow-glow-amber;
     border-radius: $radius-full;
   }
 

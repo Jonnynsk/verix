@@ -1,0 +1,57 @@
+@use "../../styles" as *;
+
+.about {
+  &__text {
+    margin: $space-7 0 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-600;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $space-6;
+    margin: $space-9 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__card {
+    padding: $space-6;
+    background: $color-white;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-lg;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  &__card:hover {
+    box-shadow: $shadow-card-soft;
+    border-color: $color-slate-200;
+  }
+
+  &__cardTitle {
+    margin: 0 0 $space-3;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $color-slate-900;
+  }
+
+  &__cardText {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: $color-slate-600;
+  }
+
+  &__note {
+    margin: $space-6 0 0;
+    padding: $space-4 $space-5;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: $color-slate-600;
+    background: $color-cyan-50;
+    border: 1px solid $color-cyan-200;
+    border-radius: $radius-md;
+  }
+}

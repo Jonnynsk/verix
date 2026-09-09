@@ -87,6 +87,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
       "Разработка технических условий и технологических инструкций на производство",
     tone: "orange",
     icon: "cog",
+    href: "/services/razrabotka-tu",
   },
   {
     anchor: "service-expert",

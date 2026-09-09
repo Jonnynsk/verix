@@ -19,6 +19,10 @@ export const NAV_SERVICE_LINKS = [
     href: "/services/sgr",
     label: "Свидетельства СГР",
   },
+  {
+    href: "/services/razrabotka-tu",
+    label: "Разработка ТУ",
+  },
 ] as const;
 
 export const SERVICES_HUB_PATH = "/services";

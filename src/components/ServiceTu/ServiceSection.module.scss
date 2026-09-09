@@ -1,0 +1,68 @@
+@use "../../styles" as *;
+
+.section {
+  width: 100%;
+  scroll-margin-top: 96px;
+
+  &--white {
+    background: $color-white;
+  }
+
+  &--muted {
+    background: $color-slate-50;
+  }
+
+  &__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+    padding-inline: $page-padding-x-mobile;
+    padding-block: $space-11;
+
+    @media (min-width: $bp-md) {
+      padding-inline: $page-padding-x-tablet;
+      padding-block: $section-padding-y-footer;
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-inline: $page-padding-x-wide;
+      padding-block: $section-padding-y-md;
+    }
+  }
+
+  &__tag {
+    margin: 0;
+    font-size: $font-size-marquee;
+    line-height: $line-height-marquee;
+    letter-spacing: $tracking-wide-sm;
+    font-weight: $font-weight-regular;
+    color: $color-cyan-600;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: $space-4 0 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 600;
+    color: $color-slate-900;
+    text-wrap: balance;
+  }
+
+  &__subtitle {
+    margin: $space-5 0 0;
+    max-width: 42rem;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    letter-spacing: $tracking-tight-md;
+    font-weight: $font-weight-regular;
+    color: $color-slate-600;
+    text-wrap: balance;
+
+    @media (min-width: $bp-lg) {
+      margin-top: $space-6;
+    }
+  }
+}

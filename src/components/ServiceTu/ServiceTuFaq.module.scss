@@ -1,0 +1,82 @@
+@use "../../styles" as *;
+
+.faq {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    margin-top: $space-9;
+  }
+
+  &__item {
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-md;
+    background: $color-white;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+
+  &__item:hover {
+    border-color: $color-slate-200;
+  }
+
+  &__question {
+    position: relative;
+    padding: $space-5 $space-6;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $color-slate-900;
+    cursor: pointer;
+    list-style: none;
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-4;
+  }
+
+  &__question::-webkit-details-marker {
+    display: none;
+  }
+
+  &__question::after {
+    content: "";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s ease;
+  }
+
+  &__item[open] .faq__question::after {
+    transform: rotate(180deg);
+  }
+
+  &__answer {
+    padding: 0 $space-6 $space-5;
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: $color-slate-600;
+    animation: fadeIn 0.2s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
