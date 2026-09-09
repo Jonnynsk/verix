@@ -51,6 +51,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
       "Подтверждение соответствия продукции требованиям национальных стандартов",
     tone: "purple",
     icon: "award",
+    href: "/services/deklarirovanie-gost-r",
   },
   {
     anchor: "service-refusal",
