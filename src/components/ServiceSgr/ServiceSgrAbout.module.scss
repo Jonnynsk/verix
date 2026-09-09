@@ -50,22 +50,23 @@
     padding: $space-4 $space-8;
     font-size: $font-size-body;
     font-weight: 600;
-    color: $color-amber-600;
+    color: $color-white;
     text-decoration: none;
-    background: $color-amber-50;
-    border: 1px solid $color-amber-100;
+    background: $gradient-icon-cyan;
+    box-shadow: $shadow-glow-cyan-soft;
     border-radius: $radius-lg;
     transition:
       background 0.15s ease,
       border-color 0.15s ease;
 
     &:hover {
-      background: $color-amber-100;
-      border-color: $color-amber-500;
+      background: $gradient-icon-cyan;
+      box-shadow: $shadow-glow-cyan-soft;
     }
 
     &:focus-visible {
-      outline: 2px solid $color-cyan-600;
+      outline: none;
+      box-shadow: 0 0 0 3px $color-cyan-500-20;
       outline-offset: 3px;
     }
   }

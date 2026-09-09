@@ -1,0 +1,128 @@
+@use "../../styles" as *;
+
+.lead {
+  background: $color-slate-50;
+  border-top: 1px solid $color-slate-200;
+}
+
+.lead__inner {
+  max-width: 45rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lead__title {
+  margin: 0 0 $space-3;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-slate-900;
+  text-wrap: balance;
+}
+
+.lead__text {
+  margin: 0 0 $space-8;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: $color-slate-600;
+}
+
+.lead__form {
+  display: grid;
+  gap: $space-4;
+  text-align: left;
+}
+
+.lead__field {
+  display: grid;
+  gap: $space-2;
+}
+
+.lead__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $color-slate-900;
+}
+
+.lead__input,
+.lead__textarea {
+  width: 100%;
+  padding: $space-3 $space-4;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $color-slate-900;
+  background: $color-white;
+  border: 1px solid $color-slate-200;
+  border-radius: $radius-md;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lead__input:focus,
+.lead__textarea:focus {
+  outline: none;
+  border-color: $color-cyan-500;
+  box-shadow: 0 0 0 3px $color-cyan-500-20;
+}
+
+.lead__input::placeholder,
+.lead__textarea::placeholder {
+  color: $color-slate-400;
+}
+
+.lead__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.lead__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  width: 100%;
+  padding: $space-4 $space-6;
+  margin-top: $space-2;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $color-white;
+  background: $gradient-primary-cta;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.lead__submit:hover {
+  opacity: 0.9;
+}
+
+.lead__submit:active {
+  transform: scale(0.98);
+}
+
+.lead__submit:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px $color-cyan-500-20;
+}
+
+.lead__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lead__consent {
+  margin: $space-3 0 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: $color-slate-500;
+  text-align: center;
+}
+
+.lead__consent a {
+  color: $color-cyan-600;
+  text-decoration: underline;
+}
+
+.lead__consent a:hover {
+  text-decoration: none;
+}
