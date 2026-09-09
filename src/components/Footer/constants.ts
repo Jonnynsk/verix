@@ -3,7 +3,7 @@ export const FOOTER_TAGLINE =
 
 export const FOOTER_SERVICES = [
   { href: "/services/sertifikaciya-tr-ts", label: "Сертификация ТР ТС" },
-  { href: "#service-gost", label: "Декларирование ГОСТ Р" },
+  { href: "/services/deklarirovanie-gost-r", label: "Декларирование ГОСТ Р" },
   { href: "/services/otkaznie-pisma", label: "Отказные письма" },
   { href: "/services/chestny-znak", label: "Честный знак" },
   { href: "#service-sgr", label: "Свидетельства СГР" },

@@ -4,6 +4,10 @@ export const NAV_SERVICE_LINKS = [
     label: "Сертификация ТР ТС",
   },
   {
+    href: "/services/deklarirovanie-gost-r",
+    label: "Декларирование ГОСТ Р",
+  },
+  {
     href: "/services/otkaznie-pisma",
     label: "Отказные письма",
   },

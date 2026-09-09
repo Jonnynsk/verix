@@ -1,0 +1,72 @@
+@use "../../styles" as *;
+
+.docTypes {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-7;
+    list-style: none;
+    margin: $space-9 0 0;
+    padding: 0;
+
+    @media (min-width: $bp-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    padding: $space-8;
+    background: $color-slate-50;
+    border: 1px solid $color-slate-200;
+    border-left: 4px solid $color-cyan-500;
+    border-radius: $radius-lg;
+  }
+
+  &__cardTitle {
+    margin: 0;
+    font-size: $font-size-lead;
+    line-height: $line-height-lead;
+    font-weight: 600;
+    color: $color-slate-900;
+  }
+
+  &__cardText {
+    margin: $space-4 0 0;
+    font-size: $font-size-body;
+    line-height: $line-height-body-relaxed;
+    color: $color-slate-600;
+  }
+
+  &__ctaWrap {
+    margin: $space-9 0 0;
+    text-align: center;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: $space-4 $space-8;
+    font-size: $font-size-body;
+    font-weight: 600;
+    color: $color-cyan-800;
+    text-decoration: none;
+    background: $color-cyan-50;
+    border: 1px solid $color-cyan-200;
+    border-radius: $radius-lg;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease;
+
+    &:hover {
+      background: $color-cyan-100;
+      border-color: $color-cyan-400;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-cyan-600;
+      outline-offset: 3px;
+    }
+  }
+}
