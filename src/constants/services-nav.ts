@@ -15,6 +15,10 @@ export const NAV_SERVICE_LINKS = [
     href: "/services/chestny-znak",
     label: "Честный знак",
   },
+  {
+    href: "/services/sgr",
+    label: "Свидетельства СГР",
+  },
 ] as const;
 
 export const SERVICES_HUB_PATH = "/services";

@@ -78,6 +78,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
       "Государственная регистрация продукции для законной реализации на территории РФ",
     tone: "cyan",
     icon: "flask",
+    href: "/services/sgr",
   },
   {
     anchor: "service-tu",
