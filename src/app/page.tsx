@@ -3,6 +3,7 @@ import { FOOTER_SOCIAL } from "@/components/Footer/constants";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { ProcessWork } from "@/components/ProcessWork";
+import { RemoteDelivery } from "@/components/RemoteDelivery";
 import { SERVICE_CARDS } from "@/components/Services/constants";
 import { SITE_ADDRESS, SITE_EMAIL, PHONE_TEL } from "@/constants/site";
 import {
@@ -118,6 +119,7 @@ export default function Home() {
       <Services />
       <ProcessWork />
       <Advantages />
+      <RemoteDelivery />
       <SocialCta />
       <Reviews />
     </div>
