@@ -21,17 +21,17 @@ export const FOOTER_COMPANY = [
 
 export const FOOTER_SOCIAL = [
   {
-    href: "https://vk.ru/verix_certificate",
+    href: "https://vk.ru/verix_certificate/",
     label: "ВКонтакте",
     icon: "vk" as const,
   },
   {
-    href: "/go/telegram",
+    href: "/go/telegram/",
     label: "Telegram",
     icon: "telegram" as const,
   },
   {
-    href: "/go/whatsapp",
+    href: "/go/whatsapp/",
     label: "WhatsApp",
     icon: "whatsapp" as const,
   },

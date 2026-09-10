@@ -1,6 +1,4 @@
-import type { MetadataRoute } from "next";
-
-import { SEO_CANONICAL_URL } from "@/constants/seo";
+import { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
@@ -9,9 +7,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: "/go/",
     },
-    sitemap: `${SEO_CANONICAL_URL}sitemap.xml`,
-    host: SEO_CANONICAL_URL,
+    sitemap: "https://verix-cert.ru/sitemap.xml",
   };
 }
-

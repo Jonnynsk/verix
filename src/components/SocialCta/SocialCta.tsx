@@ -77,7 +77,7 @@ export function SocialCta() {
               href={item.href}
               className={styles.socialCta__button}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               <span className={styles.socialCta__buttonIcon} aria-hidden>
                 <SocialIcon name={item.icon as SocialIconName} />

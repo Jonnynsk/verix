@@ -46,7 +46,7 @@ export function FooterSocialIcons() {
             className={styles.list__link}
             aria-label={item.label}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             <Icon name={item.icon} />
           </a>
