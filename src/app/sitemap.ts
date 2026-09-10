@@ -49,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: seoPathUrl("services/registratsiya-tovarnogo-znaka"),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: seoPathUrl("services/razrabotka-tu"),
       lastModified: new Date(),
       changeFrequency: "monthly",

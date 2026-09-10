@@ -8,7 +8,7 @@ export const FOOTER_SERVICES = [
   { href: "/services/chestny-znak", label: "Честный знак" },
   { href: "/services/sgr", label: "Свидетельства СГР" },
   { href: "/services/razrabotka-tu", label: "Разработка ТУ" },
-  { href: "#service-tmz", label: "Регистрация товарного знака" }, 
+  { href: "/services/registratsiya-tovarnogo-znaka", label: "Регистрация товарного знака" },
   { href: "/services/dobrovolnaya-sertifikaciya", label: "Добровольная сертификация" },
 ] as const;
 
