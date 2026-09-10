@@ -24,6 +24,10 @@ export const NAV_SERVICE_LINKS = [
     label: "Разработка ТУ",
   },
   {
+    href: "/services/registratsiya-tovarnogo-znaka",
+    label: "Регистрация товарного знака",
+  },
+  {
     href: "/services/dobrovolnaya-sertifikaciya",
     label: "Добровольная сертификация",
   },

@@ -96,6 +96,7 @@ export const SERVICE_CARDS: ReadonlyArray<{
       "Официальная защита названия и логотипа в Роспатенте для безопасных продаж на маркетплейсах",
     tone: "indigo",
     icon: "scale",
+    href: "/services/registratsiya-tovarnogo-znaka",
   },
   {
     anchor: "service-voluntary",
