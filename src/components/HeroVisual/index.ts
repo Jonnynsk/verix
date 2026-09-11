@@ -5,6 +5,6 @@ export type {
   HeroVisualFloatTone,
 } from "./HeroVisual";
 
-export const HERO_MAIN_IMAGE_SRC = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero/hero-main.jpg`;
+export const HERO_MAIN_IMAGE_SRC = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero/hero-main.avif`;
 
-export const SERVICES_HERO_IMAGE_SRC = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero/services-main.jpg`;
+export const SERVICES_HERO_IMAGE_SRC = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/hero/services-main.avif`;
