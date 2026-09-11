@@ -2,7 +2,7 @@ import { ScrollToAnchorLink } from "@/components/ScrollToAnchorLink";
 import { CONTACT_SECTION_HREF, CONTACT_SECTION_ID } from "@/constants/site";
 
 import { SERVICE_TRTS_DOC_TYPES } from "./constants";
-import { ServiceSection } from "./ServiceSection";
+import { ServiceSection } from "@/components/ServiceSection";
 
 import styles from "./ServiceTrtsDocTypes.module.scss";
 

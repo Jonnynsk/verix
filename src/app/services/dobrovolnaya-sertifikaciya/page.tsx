@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 
 import {
   ServiceVoluntaryAbout,
-  ServiceVoluntaryFaq,
   SERVICE_VOLUNTARY_FAQ,
   ServiceVoluntaryHero,
+  SERVICE_VOLUNTARY_PRICING,
   SERVICE_VOLUNTARY_META,
   ServiceVoluntaryPricing,
   SERVICE_VOLUNTARY_SLUG,
 } from "@/components/ServiceVoluntary";
+import { SharedFaq, stripHtml } from "@/components/SharedFaq";
 import { SocialCta } from "@/components/SocialCta";
 import { PHONE_TEL, SITE_EMAIL } from "@/constants/site";
 import { seoPathUrl, SEO_CANONICAL_URL, SEO_SITE_NAME } from "@/constants/seo";
@@ -71,15 +72,30 @@ export default function DobrovolnayaSertifikaciyaPage() {
         areaServed: "RU",
         serviceType: "Добровольный сертификат соответствия",
         url: pageUrl,
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "RUB",
+          offerCount: SERVICE_VOLUNTARY_PRICING.rows.length,
+          offers: SERVICE_VOLUNTARY_PRICING.rows.map((row) => ({
+            "@type": "Offer",
+            name: row.service,
+            price: row.price.replace(/\D/g, "") || "0",
+            priceCurrency: "RUB",
+          })),
+        },
       },
       {
         "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        about: {
+          "@id": `${pageUrl}#service`,
+        },
         mainEntity: SERVICE_VOLUNTARY_FAQ.items.map((item) => ({
           "@type": "Question",
           name: item.question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: item.answer,
+            text: stripHtml(item.answer),
           },
         })),
       },
@@ -95,7 +111,12 @@ export default function DobrovolnayaSertifikaciyaPage() {
       <ServiceVoluntaryHero />
       <ServiceVoluntaryAbout />
       <ServiceVoluntaryPricing />
-      <ServiceVoluntaryFaq />
+      <SharedFaq
+        items={SERVICE_VOLUNTARY_FAQ.items}
+        title={SERVICE_VOLUNTARY_FAQ.title}
+        tag={SERVICE_VOLUNTARY_FAQ.tag}
+        id="service-voluntary-faq"
+      />
       <SocialCta />
     </>
   );

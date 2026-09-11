@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 
 import {
   ServiceTrademarkAbout,
-  ServiceTrademarkFaq,
   ServiceTrademarkHero,
   ServiceTrademarkPricing,
   SERVICE_TRADEMARK_FAQ,
-  SERVICE_TRADEMARK_META,
+  
+  SERVICE_TRADEMARK_PRICING,SERVICE_TRADEMARK_META,
   SERVICE_TRADEMARK_SLUG,
 } from "@/components/ServiceTrademark";
+import { SharedFaq, stripHtml } from "@/components/SharedFaq";
 import { SocialCta } from "@/components/SocialCta";
 import { PHONE_TEL, SITE_EMAIL } from "@/constants/site";
 import { seoPathUrl, SEO_CANONICAL_URL, SEO_SITE_NAME } from "@/constants/seo";
@@ -71,15 +72,30 @@ export default function RegistratsiyaTovarnogoZnakaPage() {
         areaServed: "RU",
         serviceType: "Регистрация товарного знака",
         url: pageUrl,
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "RUB",
+          offerCount: SERVICE_TRADEMARK_PRICING.rows.length,
+          offers: SERVICE_TRADEMARK_PRICING.rows.map((row) => ({
+            "@type": "Offer",
+            name: row.service,
+            price: row.price.replace(/\D/g, "") || "0",
+            priceCurrency: "RUB",
+          })),
+        },
       },
       {
         "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        about: {
+          "@id": `${pageUrl}#service`,
+        },
         mainEntity: SERVICE_TRADEMARK_FAQ.items.map((item) => ({
           "@type": "Question",
           name: item.question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: item.answer,
+            text: stripHtml(item.answer),
           },
         })),
       },
@@ -95,7 +111,12 @@ export default function RegistratsiyaTovarnogoZnakaPage() {
       <ServiceTrademarkHero />
       <ServiceTrademarkAbout />
       <ServiceTrademarkPricing />
-      <ServiceTrademarkFaq />
+      <SharedFaq
+        items={SERVICE_TRADEMARK_FAQ.items}
+        title={SERVICE_TRADEMARK_FAQ.title}
+        tag={SERVICE_TRADEMARK_FAQ.tag}
+        id="service-trademark-faq"
+      />
       <SocialCta />
     </>
   );

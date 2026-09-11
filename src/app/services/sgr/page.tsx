@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 
 import {
   ServiceSgrAbout,
-  ServiceSgrFaq,
   SERVICE_SGR_FAQ,
   ServiceSgrHero,
+  SERVICE_SGR_PRICING,
   SERVICE_SGR_META,
   ServiceSgrPricing,
   SERVICE_SGR_SLUG,
 } from "@/components/ServiceSgr";
+import { SharedFaq, stripHtml } from "@/components/SharedFaq";
 import { SocialCta } from "@/components/SocialCta";
 import { PHONE_TEL, SITE_EMAIL } from "@/constants/site";
 import { seoPathUrl, SEO_CANONICAL_URL, SEO_SITE_NAME } from "@/constants/seo";
@@ -71,15 +72,30 @@ export default function SgrPage() {
         areaServed: "RU",
         serviceType: "Свидетельство о государственной регистрации",
         url: pageUrl,
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "RUB",
+          offerCount: SERVICE_SGR_PRICING.rows.length,
+          offers: SERVICE_SGR_PRICING.rows.map((row) => ({
+            "@type": "Offer",
+            name: row.service,
+            price: row.price.replace(/\D/g, "") || "0",
+            priceCurrency: "RUB",
+          })),
+        },
       },
       {
         "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        about: {
+          "@id": `${pageUrl}#service`,
+        },
         mainEntity: SERVICE_SGR_FAQ.items.map((item) => ({
           "@type": "Question",
           name: item.question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: item.answer,
+            text: stripHtml(item.answer),
           },
         })),
       },
@@ -95,7 +111,12 @@ export default function SgrPage() {
       <ServiceSgrHero />
       <ServiceSgrAbout />
       <ServiceSgrPricing />
-      <ServiceSgrFaq />
+      <SharedFaq
+        items={SERVICE_SGR_FAQ.items}
+        title={SERVICE_SGR_FAQ.title}
+        tag={SERVICE_SGR_FAQ.tag}
+        id="service-sgr-faq"
+      />
       <SocialCta />
     </>
   );

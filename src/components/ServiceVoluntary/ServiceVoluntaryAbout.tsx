@@ -1,4 +1,4 @@
-import { ServiceSection } from "@/components/ServiceTrts/ServiceSection";
+import { ServiceSection } from "@/components/ServiceSection";
 
 import { SERVICE_VOLUNTARY_ABOUT } from "./constants";
 

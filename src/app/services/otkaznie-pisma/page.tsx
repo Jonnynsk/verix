@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 
 import {
   ServiceRefusalAbout,
-  ServiceRefusalFaq,
   SERVICE_REFUSAL_FAQ,
   ServiceRefusalHero,
+  SERVICE_REFUSAL_PRICING,
   SERVICE_REFUSAL_META,
   ServiceRefusalPricing,
   SERVICE_REFUSAL_SLUG,
 } from "@/components/ServiceRefusal";
+import { SharedFaq, stripHtml } from "@/components/SharedFaq";
 import { SocialCta } from "@/components/SocialCta";
 import { PHONE_TEL, SITE_EMAIL } from "@/constants/site";
 import { seoPathUrl, SEO_CANONICAL_URL, SEO_SITE_NAME } from "@/constants/seo";
@@ -71,15 +72,30 @@ export default function OtkazniePismaPage() {
         areaServed: "RU",
         serviceType: "Отказное письмо",
         url: pageUrl,
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "RUB",
+          offerCount: SERVICE_REFUSAL_PRICING.rows.length,
+          offers: SERVICE_REFUSAL_PRICING.rows.map((row) => ({
+            "@type": "Offer",
+            name: row.service,
+            price: row.price.replace(/\D/g, "") || "0",
+            priceCurrency: "RUB",
+          })),
+        },
       },
       {
         "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        about: {
+          "@id": `${pageUrl}#service`,
+        },
         mainEntity: SERVICE_REFUSAL_FAQ.items.map((item) => ({
           "@type": "Question",
           name: item.question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: item.answer,
+            text: stripHtml(item.answer),
           },
         })),
       },
@@ -95,7 +111,12 @@ export default function OtkazniePismaPage() {
       <ServiceRefusalHero />
       <ServiceRefusalAbout />
       <ServiceRefusalPricing />
-      <ServiceRefusalFaq />
+      <SharedFaq
+        items={SERVICE_REFUSAL_FAQ.items}
+        title={SERVICE_REFUSAL_FAQ.title}
+        tag={SERVICE_REFUSAL_FAQ.tag}
+        id="service-refusal-faq"
+      />
       <SocialCta />
     </>
   );

@@ -1,5 +1,5 @@
 import { ServicesGrid } from "@/components/Services/ServicesGrid";
-import { ServiceSection } from "@/components/ServiceTrts/ServiceSection";
+import { ServiceSection } from "@/components/ServiceSection";
 
 import { SERVICES_HUB_CARDS } from "./constants";
 

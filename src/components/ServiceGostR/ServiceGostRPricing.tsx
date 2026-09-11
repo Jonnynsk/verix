@@ -1,5 +1,5 @@
 import { SERVICE_GOST_R_PRICING } from "./constants";
-import { ServiceSection } from "./ServiceSection";
+import { ServiceSection } from "@/components/ServiceSection";
 import styles from "./ServiceGostRPricing.module.scss";
 
 export function ServiceGostRPricing() {

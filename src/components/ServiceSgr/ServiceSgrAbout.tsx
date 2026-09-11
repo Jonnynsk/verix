@@ -1,5 +1,5 @@
 import { ScrollToAnchorLink } from "@/components/ScrollToAnchorLink";
-import { ServiceSection } from "@/components/ServiceTrts/ServiceSection";
+import { ServiceSection } from "@/components/ServiceSection";
 import { CONTACT_SECTION_HREF, CONTACT_SECTION_ID } from "@/constants/site";
 
 import { SERVICE_SGR_ABOUT } from "./constants";
