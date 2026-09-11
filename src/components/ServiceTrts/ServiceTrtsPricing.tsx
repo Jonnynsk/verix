@@ -1,5 +1,5 @@
 import { SERVICE_TRTS_PRICING } from "./constants";
-import { ServiceSection } from "./ServiceSection";
+import { ServiceSection } from "@/components/ServiceSection";
 
 import styles from "./ServiceTrtsPricing.module.scss";
 

@@ -1,15 +1,16 @@
 @use "../../styles" as *;
 
 .section {
+  box-sizing: border-box;
   width: 100%;
-  scroll-margin-top: 96px;
+  padding-inline: $page-padding-x-mobile;
 
-  &--white {
-    background: $color-white;
+  @media (min-width: $bp-md) {
+    padding-inline: $page-padding-x-tablet;
   }
 
-  &--muted {
-    background: $color-slate-50;
+  @media (min-width: $bp-lg) {
+    padding-inline: $page-padding-x-wide;
   }
 
   &__inner {
@@ -17,16 +18,13 @@
     width: 100%;
     max-width: $content-max;
     margin-inline: auto;
-    padding-inline: $page-padding-x-mobile;
     padding-block: $space-11;
 
     @media (min-width: $bp-md) {
-      padding-inline: $page-padding-x-tablet;
       padding-block: $section-padding-y-footer;
     }
 
     @media (min-width: $bp-lg) {
-      padding-inline: $page-padding-x-wide;
       padding-block: $section-padding-y-md;
     }
   }
@@ -38,6 +36,7 @@
     letter-spacing: $tracking-wide-sm;
     font-weight: $font-weight-regular;
     color: $color-cyan-600;
+    text-align: left;
     text-transform: uppercase;
   }
 
@@ -48,21 +47,31 @@
     letter-spacing: $tracking-tight-lg;
     font-weight: 600;
     color: $color-slate-900;
+    text-align: left;
     text-wrap: balance;
   }
 
   &__subtitle {
     margin: $space-5 0 0;
-    max-width: 42rem;
+    max-width: 40rem;
     font-size: $font-size-lead;
     line-height: $line-height-lead;
     letter-spacing: $tracking-tight-md;
     font-weight: $font-weight-regular;
     color: $color-slate-600;
+    text-align: left;
     text-wrap: balance;
 
     @media (min-width: $bp-lg) {
       margin-top: $space-6;
     }
+  }
+
+  &--white {
+    background: $color-white;
+  }
+
+  &--muted {
+    background: $color-slate-50;
   }
 }
