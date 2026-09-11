@@ -5,7 +5,12 @@ import { Marquee } from "@/components/Marquee";
 import { ProcessWork } from "@/components/ProcessWork";
 import { RemoteDelivery } from "@/components/RemoteDelivery";
 import { SERVICE_CARDS } from "@/components/Services/constants";
-import { SITE_EMAIL, PHONE_TEL, STREET_ADDRESS } from "@/constants/site";
+import {
+  SITE_EMAIL,
+  PHONE_TEL,
+  STREET_ADDRESS,
+  SITE_ADDRESS,
+} from "@/constants/site";
 import {
   SEO_ADDRESS_LOCALITY,
   SEO_ADDRESS_REGION,
@@ -43,6 +48,8 @@ export default function Home() {
         name: SEO_SITE_NAME,
         url: SEO_CANONICAL_URL,
         email: SITE_EMAIL,
+        address: SITE_ADDRESS,
+        image: `${SEO_CANONICAL_URL}/brand-mark.svg`,
         telephone: PHONE_TEL,
         ...(sameAs.length ? { sameAs } : {}),
         contactPoint: [
@@ -64,6 +71,8 @@ export default function Home() {
         description: SEO_DESCRIPTION,
         telephone: PHONE_TEL,
         email: SITE_EMAIL,
+        image: `${SEO_CANONICAL_URL}/brand-mark.svg`,
+        priceRange: "₽₽",
         address: {
           "@type": "PostalAddress",
           postalCode: "630032",

@@ -73,7 +73,7 @@ export function Footer() {
           </div>
 
           <nav className={styles.footer__column} aria-label="Услуги">
-            <h4 className={styles.footer__heading}>Услуги</h4>
+            <p className={styles.footer__heading}>Услуги</p>
             <ul className={styles.footer__list}>
               {FOOTER_SERVICES.map((item) => (
                 <li key={item.href}>
@@ -86,7 +86,7 @@ export function Footer() {
           </nav>
 
           <nav className={styles.footer__column} aria-label="Компания">
-            <h4 className={styles.footer__heading}>Компания</h4>
+            <p className={styles.footer__heading}>Компания</p>
             <ul className={styles.footer__list}>
               {FOOTER_COMPANY.map((item) => (
                 <li key={item.href}>
@@ -99,7 +99,7 @@ export function Footer() {
           </nav>
 
           <div className={styles.footer__column}>
-            <h4 className={styles.footer__heading}>Контакты</h4>
+            <p className={styles.footer__heading}>Контакты</p>
             <ul
               className={`${styles.footer__list} ${styles.footer__listContacts}`}
             >
