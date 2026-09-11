@@ -102,11 +102,6 @@ export default function Home() {
         name: SEO_SITE_NAME,
         description: SEO_DESCRIPTION,
         inLanguage: SEO_LANGUAGE,
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${SEO_CANONICAL_URL}?q={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
       },
       {
         "@type": "WebPage",
