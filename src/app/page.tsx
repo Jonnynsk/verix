@@ -7,7 +7,6 @@ import { RemoteDelivery } from "@/components/RemoteDelivery";
 import { SERVICE_CARDS } from "@/components/Services/constants";
 import { SITE_ADDRESS, SITE_EMAIL, PHONE_TEL } from "@/constants/site";
 import {
-  SEO_CATEGORY,
   SEO_CANONICAL_URL,
   SEO_DESCRIPTION,
   SEO_LANGUAGE,
@@ -62,7 +61,6 @@ export default function Home() {
         name: SEO_SITE_NAME,
         url: SEO_CANONICAL_URL,
         description: SEO_DESCRIPTION,
-        category: SEO_CATEGORY,
         telephone: PHONE_TEL,
         email: SITE_EMAIL,
         address: {
