@@ -58,3 +58,5 @@ export const SEO_OG_IMAGE = `${SEO_SITE_URL}${SEO_BASE_PATH}/og-image.png`;
 export const SEO_THEME_COLOR = "#0f172a";
 export const SEO_CATEGORY = "business";
 export const SEO_REGION = "Россия";
+export const SEO_ADDRESS_LOCALITY = "Новосибирск";
+export const SEO_ADDRESS_REGION = "Новосибирская область";

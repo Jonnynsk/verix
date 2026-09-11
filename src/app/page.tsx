@@ -5,12 +5,13 @@ import { Marquee } from "@/components/Marquee";
 import { ProcessWork } from "@/components/ProcessWork";
 import { RemoteDelivery } from "@/components/RemoteDelivery";
 import { SERVICE_CARDS } from "@/components/Services/constants";
-import { SITE_ADDRESS, SITE_EMAIL, PHONE_TEL } from "@/constants/site";
+import { SITE_EMAIL, PHONE_TEL, STREET_ADDRESS } from "@/constants/site";
 import {
+  SEO_ADDRESS_LOCALITY,
+  SEO_ADDRESS_REGION,
   SEO_CANONICAL_URL,
   SEO_DESCRIPTION,
   SEO_LANGUAGE,
-  SEO_REGION,
   SEO_SITE_NAME,
 } from "@/constants/seo";
 import { Services } from "@/components/Services";
@@ -65,9 +66,11 @@ export default function Home() {
         email: SITE_EMAIL,
         address: {
           "@type": "PostalAddress",
-          streetAddress: SITE_ADDRESS,
-          addressLocality: SEO_REGION,
+          postalCode: "630032",
           addressCountry: "RU",
+          addressRegion: SEO_ADDRESS_REGION,
+          addressLocality: SEO_ADDRESS_LOCALITY,
+          streetAddress: STREET_ADDRESS,
         },
         areaServed: "RU",
         hasOfferCatalog: {
