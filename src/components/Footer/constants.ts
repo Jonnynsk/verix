@@ -17,6 +17,7 @@ export const FOOTER_COMPANY = [
   { href: "/#advantages", label: "Преимущества" },
   { href: "/#process", label: "Процесс" },
   { href: "/#reviews", label: "Отзывы" },
+  { href: "/about", label: "О компании" },
 ] as const;
 
 export const FOOTER_SOCIAL = [

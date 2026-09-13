@@ -1,0 +1,66 @@
+@use "../../styles" as *;
+
+.tableWrap {
+  margin-top: $space-8;
+  overflow-x: auto;
+  background: $color-white;
+  border: 1px solid $color-slate-200;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-xs;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: $font-size-body;
+
+  tr {
+    border-bottom: 1px solid $color-slate-200;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  th,
+  td {
+    padding: $space-5 $space-6;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  th {
+    width: 35%;
+    font-weight: 600;
+    color: $color-slate-900;
+    background: $color-slate-50;
+    border-right: 1px solid $color-slate-200;
+
+    @media (max-width: $bp-sm) {
+      display: block;
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid $color-slate-200;
+      padding-bottom: $space-2;
+    }
+  }
+
+  td {
+    color: $color-slate-700;
+
+    @media (max-width: $bp-sm) {
+      display: block;
+      width: 100%;
+      padding-top: $space-2;
+    }
+  }
+}
+
+.note {
+  margin: $space-7 0 0;
+  font-size: $font-size-marquee;
+  line-height: $line-height-body-relaxed;
+  color: $color-slate-600;
+  max-width: 60rem;
+}

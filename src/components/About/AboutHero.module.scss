@@ -1,0 +1,89 @@
+@use "../../styles" as *;
+
+.hero {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: $page-padding-x-mobile;
+  padding-block: $space-12 $space-13;
+  overflow: hidden;
+  background-color: $color-slate-900;
+  scroll-margin-top: 96px;
+
+  @media (min-width: $bp-md) {
+    padding-inline: $page-padding-x-tablet;
+    padding-block: $space-13 $space-14;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding-inline: $page-padding-x-wide;
+    padding-block: $space-14 $space-15;
+  }
+
+  &__bg {
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0.25;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 100%);
+    z-index: 1;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-7;
+    max-width: 56rem;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__badge {
+    padding: $space-2 $space-4;
+    font-size: $font-size-marquee;
+    line-height: 1.4;
+    color: $color-white;
+    background: $gradient-icon-cyan;
+    box-shadow: $shadow-xs;
+    border-radius: $radius-full;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.15;
+    letter-spacing: $tracking-tight-lg;
+    font-weight: 700;
+    color: $color-white;
+    text-wrap: balance;
+  }
+
+  &__lead {
+    margin: 0;
+    font-size: $font-size-lead;
+    line-height: 1.65;
+    color: $color-slate-200;
+    text-wrap: balance;
+  }
+}
