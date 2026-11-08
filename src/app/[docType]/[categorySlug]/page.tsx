@@ -5,6 +5,7 @@ import hubsData from "@/data/hubs.json";
 import productsData from "@/data/products.json";
 import { ProductsTable } from "./ProductsTable";
 import { SeoContent } from "./SeoContent";
+import { DocInfoNotice } from "./DocInfoNotice";
 import { SocialCta } from "@/components/SocialCta";
 import { seoPathUrl, SEO_CANONICAL_URL, SEO_SITE_NAME } from "@/constants/seo";
 import { PHONE_TEL, SITE_EMAIL } from "@/constants/site";
@@ -187,13 +188,12 @@ export default async function ProgrammaticSeoPage({ params }: PageProps) {
       {/* Products Table Section with Search */}
       <ProductsTable products={categoryProducts} categoryTitle={hub.h1} />
 
+      {/* Info Notice Callout */}
+      <DocInfoNotice />
+
       {/* SEO HTML Text Section */}
       <SeoContent
-        html={
-          hub.seoHtmlText ||
-          hub["SEO_HTML_Текст"] ||
-          hub["seo_html_текст"]
-        }
+        html={hub.seoHtmlText || hub["SEO_HTML_Текст"] || hub["seo_html_текст"]}
       />
 
       {/* Social CTA Block */}
