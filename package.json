@@ -11,14 +11,18 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run convert:seo && next build",
+    "convert:seo": "tsx scripts/convertExcelToJson.ts",
     "start": "next start",
     "deploy": "npm run build && gh-pages -d out --nojekyll"
   },
   "dependencies": {
+    "@types/xlsx": "^0.0.35",
     "next": "16.2.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tsx": "^4.23.15",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -1,0 +1,157 @@
+@use "../../../styles" as *;
+
+.section {
+  width: 100%;
+  padding-inline: $page-padding-x-mobile;
+  padding-block: $space-10 $space-12;
+  background: $color-slate-50;
+
+  @media (min-width: $bp-md) {
+    padding-inline: $page-padding-x-tablet;
+    padding-block: $space-12 $space-14;
+  }
+
+  @media (min-width: $bp-lg) {
+    padding-inline: $page-padding-x-wide;
+    padding-block: $space-13 $space-14;
+  }
+
+  &__inner {
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    margin-bottom: $space-8;
+
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.2;
+    font-weight: 600;
+    color: $color-slate-900;
+  }
+
+  &__searchWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  &__searchInput {
+    width: 100%;
+    height: 48px;
+    padding: 0 $space-5 0 $space-10;
+    font-size: $font-size-body;
+    color: $color-slate-900;
+    background: $color-white;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-xs;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &::placeholder {
+      color: $color-slate-400;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-cyan-500;
+      box-shadow: 0 0 0 3px $color-cyan-500-20;
+    }
+  }
+
+  &__searchIcon {
+    position: absolute;
+    top: 50%;
+    left: $space-4;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: $color-slate-400;
+    pointer-events: none;
+  }
+
+  &__tableContainer {
+    background: $color-white;
+    border: 1px solid $color-slate-200;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-xs;
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: $font-size-body;
+
+    th {
+      padding: $space-4 $space-6;
+      font-size: $font-size-marquee;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $color-slate-500;
+      background: $color-slate-50;
+      border-bottom: 1px solid $color-slate-200;
+    }
+
+    td {
+      padding: $space-5 $space-6;
+      color: $color-slate-700;
+      border-bottom: 1px solid $color-slate-100;
+    }
+
+    tbody tr {
+      transition: background-color 0.15s ease;
+
+      &:hover {
+        background-color: $color-slate-50;
+      }
+
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__empty {
+    padding: $space-12 $space-6;
+    text-align: center;
+    color: $color-slate-500;
+    font-size: $font-size-body;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-2 $space-4;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $color-cyan-700;
+    background: $color-cyan-50;
+    border: 1px solid $color-cyan-200;
+    border-radius: $radius-md;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      background: $color-cyan-100;
+      border-color: $color-cyan-400;
+    }
+  }
+}
