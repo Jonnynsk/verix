@@ -61,13 +61,18 @@ jobs:
           server-dir: /
           timeout: 60000
           log-level: standard
+          dangerous-clean-slate: false
+          state-name: .ftp-deploy-bundle-state.json
 
       - name: 💥 Запуск распаковки на сервере
         run: |
-          HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}\n" "https://verix-cert.ru/unzip.php") 
-          if [ "$HTTP_STATUS" -eq 200 ]; then
+          echo "Ожидание 5 секунд для обновления файловой системы сервера..."
+          sleep 5
+          RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" "https://verix-cert.ru/unzip.php")
+          echo "Ответ сервера: $RESPONSE"
+          if [[ "$RESPONSE" == *"HTTP_STATUS:200"* ]] && [[ "$RESPONSE" == *"SUCCESS"* ]]; then
             echo "Распаковка прошла успешно!"
           else
-            echo "Ошибка распаковки. HTTP статус: $HTTP_STATUS"
+            echo "Ошибка распаковки. Посмотрите лог ответа сервера выше."
             exit 1
           fi
