@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "npm run convert:seo && next build",
+    "build": "next build",
     "convert:seo": "tsx scripts/convertExcelToJson.ts",
     "start": "next start",
     "deploy": "npm run build && gh-pages -d out --nojekyll"
