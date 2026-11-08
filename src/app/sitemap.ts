@@ -1,10 +1,20 @@
 import type { MetadataRoute } from "next";
 
+import hubsData from "@/data/hubs.json";
 import { seoPathUrl } from "@/constants/seo";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const hubs = hubsData as Array<{ docType: string; categorySlug: string }>;
+
+  const hubEntries: MetadataRoute.Sitemap = hubs.map((hub) => ({
+    url: seoPathUrl(`${hub.docType}/${hub.categorySlug}`),
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   return [
     {
       url: seoPathUrl(),
@@ -84,6 +94,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.2,
     },
+    ...hubEntries,
   ];
 }
-

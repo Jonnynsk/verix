@@ -9,7 +9,6 @@ import {
   SITE_EMAIL,
   PHONE_TEL,
   STREET_ADDRESS,
-  SITE_ADDRESS,
 } from "@/constants/site";
 import {
   SEO_ADDRESS_LOCALITY,

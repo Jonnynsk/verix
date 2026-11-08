@@ -1,0 +1,67 @@
+@use "../../../styles" as *;
+
+.section {
+  box-sizing: border-box;
+  width: 100%;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  background: $color-white;
+
+  &__inner {
+    width: 100%;
+    max-width: $content-max;
+    margin-inline: auto;
+  }
+}
+
+.notice {
+  padding: $space-8 $space-8;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba($color-cyan-600, 0.06) 0%,
+    rgba($color-cyan-600, 0.02) 100%
+  );
+  border: 1px solid rgba($color-cyan-600, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+
+  @media (min-width: $bp-md) {
+    padding: $space-9 $space-10;
+  }
+
+  &__header {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $color-slate-900;
+    line-height: 1.35;
+    letter-spacing: $tracking-tight-md;
+
+    @media (min-width: $bp-md) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    color: $color-slate-600;
+    font-size: 1rem;
+    line-height: $line-height-body-relaxed;
+
+    @media (min-width: $bp-md) {
+      font-size: $font-size-body;
+    }
+
+    p {
+      margin: 0;
+
+      strong {
+        color: $color-slate-900;
+        font-weight: 600;
+      }
+    }
+  }
+}
