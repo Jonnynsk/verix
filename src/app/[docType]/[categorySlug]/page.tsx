@@ -17,9 +17,8 @@ interface PageProps {
   }>;
 }
 
-export async function generateStaticParams() {
-  const hubs = hubsData as Array<{ docType: string; categorySlug: string }>;
-  return hubs.map((hub) => ({
+export function generateStaticParams() {
+  return hubsData.map((hub: any) => ({
     docType: hub.docType,
     categorySlug: hub.categorySlug,
   }));
