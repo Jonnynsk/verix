@@ -28,13 +28,46 @@ jobs:
         env:
           YANDEX_VERIFICATION: ${{ secrets.YANDEX_VERIFICATION }}
 
-      - name: 🚀 Деплой на сервер по FTP
+      - name: 🗜 Создание архива и скрипта распаковки
+        run: |
+          cd out
+          zip -qq -r ../build.zip .
+          cd ..
+          mkdir deploy_bundle
+          mv build.zip deploy_bundle/
+          cat << 'EOF' > deploy_bundle/unzip.php
+          <?php
+          $zip = new ZipArchive;
+          if ($zip->open('build.zip') === TRUE) {
+              $zip->extractTo(__DIR__);
+              $zip->close();
+              unlink('build.zip');
+              unlink(__FILE__);
+              echo "SUCCESS";
+          } else {
+              http_response_code(500);
+              echo "ERROR";
+          }
+          ?>
+          EOF
+
+      - name: 🚀 Деплой архива на сервер по FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
+          local-dir: ./deploy_bundle/
           server-dir: /
-          timeout: 600000
-          log-level: verbose
+          timeout: 60000
+          log-level: standard
+
+      - name: 💥 Запуск распаковки на сервере
+        run: |
+          HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}\n" "https://verix-cert.ru/unzip.php") 
+          if [ "$HTTP_STATUS" -eq 200 ]; then
+            echo "Распаковка прошла успешно!"
+          else
+            echo "Ошибка распаковки. HTTP статус: $HTTP_STATUS"
+            exit 1
+          fi
