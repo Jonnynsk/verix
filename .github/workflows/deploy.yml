@@ -26,53 +26,10 @@ jobs:
       - name: 🛠 Сборка проекта
         run: npm run build
         env:
-          YANDEX_VERIFICATION: ${{ secrets.YANDEX_VERIFICATION }}
+          YANDEX_VERIFICATION: ${{ secrets.YANDEX_VERIFICATION }} 
+          YANDEX_METRICA_ID: ${{ secrets.YANDEX_METRICA_ID }} 
 
-      - name: 🗜 Создание архива и скрипта распаковки
+      - name: 🚀 Деплой (Многопоточный lftp)
         run: |
-          cd out
-          zip -qq -r ../build.zip .
-          cd ..
-          mkdir deploy_bundle
-          mv build.zip deploy_bundle/
-          cat << 'EOF' > deploy_bundle/unzip.php
-          <?php
-          $zip = new ZipArchive;
-          if ($zip->open('build.zip') === TRUE) {
-              $zip->extractTo(__DIR__);
-              $zip->close();
-              unlink('build.zip');
-              unlink(__FILE__);
-              echo "SUCCESS";
-          } else {
-              http_response_code(500);
-              echo "ERROR";
-          }
-          ?>
-          EOF
-
-      - name: 🚀 Деплой архива на сервер по FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./deploy_bundle/
-          server-dir: /
-          timeout: 60000
-          log-level: standard
-          dangerous-clean-slate: false
-          state-name: .ftp-deploy-bundle-state.json
-
-      - name: 💥 Запуск распаковки на сервере
-        run: |
-          echo "Ожидание 5 секунд для обновления файловой системы сервера..."
-          sleep 5
-          RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" "https://verix-cert.ru/unzip.php")
-          echo "Ответ сервера: $RESPONSE"
-          if [[ "$RESPONSE" == *"HTTP_STATUS:200"* ]] && [[ "$RESPONSE" == *"SUCCESS"* ]]; then
-            echo "Распаковка прошла успешно!"
-          else
-            echo "Ошибка распаковки. Посмотрите лог ответа сервера выше."
-            exit 1
-          fi
+          sudo apt-get update && sudo apt-get install -y lftp
+          lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror -R --parallel=20 --delete ./out/ /www/verix-cert.ru/ ; quit" ${{ secrets.FTP_SERVER }}
