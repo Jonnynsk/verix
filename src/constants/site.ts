@@ -16,3 +16,9 @@ export const LEGAL_ENTITY = {
 /** Якорь блока контактов (SocialCta) на страницах сайта */
 export const CONTACT_SECTION_ID = "social-consult";
 export const CONTACT_SECTION_HREF = `/#${CONTACT_SECTION_ID}`;
+
+export enum ETargets {
+  Whatsapp = "whatsapp",
+  Telegram = "telegram",
+  Vkontakte = "vkontakte",
+}

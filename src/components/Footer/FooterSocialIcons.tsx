@@ -1,3 +1,6 @@
+"use client";
+
+import { ymFunc } from "@/helpers";
 import { FOOTER_SOCIAL } from "./constants";
 
 import styles from "./FooterSocialIcons.module.scss";
@@ -47,6 +50,7 @@ export function FooterSocialIcons() {
             aria-label={item.label}
             target="_blank"
             rel="noopener noreferrer nofollow"
+            onClick={() => ymFunc(item.goal)}
           >
             <Icon name={item.icon} />
           </a>

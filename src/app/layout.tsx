@@ -20,6 +20,7 @@ import {
   SEO_TITLE,
   SEO_TITLE_TEMPLATE,
 } from "@/constants/seo";
+import { YandexMetrika } from "@/components/Metrika/yandex";
 
 import "./globals.css";
 
@@ -123,6 +124,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <CookieConsent privacyHref="/privacy" />
+        <YandexMetrika />
       </body>
     </html>
   );
