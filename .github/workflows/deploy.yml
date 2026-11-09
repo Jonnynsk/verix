@@ -32,4 +32,4 @@ jobs:
       - name: 🚀 Деплой (Многопоточный lftp)
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
-          lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror -R --parallel=20 --delete ./out/ /www/verix-cert.ru/ ; quit" ${{ secrets.FTP_SERVER }}
+          lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} -e "set ssl:verify-certificate no; mirror -R --parallel=20 --delete ./out/ / ; quit" ${{ secrets.FTP_SERVER }}
