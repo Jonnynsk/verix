@@ -82,6 +82,17 @@ export default async function ProgrammaticSeoPage({ params }: PageProps) {
 
   const pageUrl = seoPathUrl(`${docType}/${categorySlug}`);
 
+  let finalSeoHtml =
+    hub.seoHtmlText || hub["SEO_HTML_Текст"] || hub["seo_html_текст"];
+
+  if (!finalSeoHtml && docType === "dokumenty") {
+    finalSeoHtml = `
+      <h2>Правила реализации и разрешительная документация</h2>
+      <p>Для законного производства, импорта и продажи данной продукции на территории РФ и стран ЕАЭС (включая реализацию через Wildberries, Ozon, Яндекс.Маркет) требуется обязательное подтверждение безопасности. В зависимости от точного кода ТН ВЭД, назначения и характеристик изделия, оформляется Сертификат соответствия, Декларация или Отказное письмо.</p>
+      <p>Торговля без разрешительных документов влечет штрафы, конфискацию товаров и блокировку карточек на маркетплейсах. Найдите вашу продукцию в таблице выше, чтобы узнать точный тип требуемого документа, или оставьте заявку на бесплатный аудит.</p>
+    `;
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -191,9 +202,7 @@ export default async function ProgrammaticSeoPage({ params }: PageProps) {
       <DocInfoNotice />
 
       {/* SEO HTML Text Section */}
-      <SeoContent
-        html={hub.seoHtmlText || hub["SEO_HTML_Текст"] || hub["seo_html_текст"]}
-      />
+      <SeoContent html={finalSeoHtml} />
 
       {/* Social CTA Block */}
       <SocialCta />
