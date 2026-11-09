@@ -1,4 +1,7 @@
+"use client"
+
 import { FOOTER_SOCIAL } from "@/components/Footer/constants";
+import { ymFunc } from "@/helpers";
 
 import styles from "./SocialCta.module.scss";
 
@@ -78,6 +81,7 @@ export function SocialCta() {
               className={styles.socialCta__button}
               target="_blank"
               rel="noopener noreferrer nofollow"
+              onClick={() => ymFunc(item.goal)}
             >
               <span className={styles.socialCta__buttonIcon} aria-hidden>
                 <SocialIcon name={item.icon as SocialIconName} />

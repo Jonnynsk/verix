@@ -1,3 +1,5 @@
+import { ETargets } from "@/constants/site";
+
 export const FOOTER_TAGLINE =
   "Профессиональный сертификационный центр. Оформление всех видов разрешительной документации.";
 
@@ -8,8 +10,14 @@ export const FOOTER_SERVICES = [
   { href: "/services/chestny-znak", label: "Честный знак" },
   { href: "/services/sgr", label: "Свидетельства СГР" },
   { href: "/services/razrabotka-tu", label: "Разработка ТУ" },
-  { href: "/services/registratsiya-tovarnogo-znaka", label: "Регистрация товарного знака" },
-  { href: "/services/dobrovolnaya-sertifikaciya", label: "Добровольная сертификация" },
+  {
+    href: "/services/registratsiya-tovarnogo-znaka",
+    label: "Регистрация товарного знака",
+  },
+  {
+    href: "/services/dobrovolnaya-sertifikaciya",
+    label: "Добровольная сертификация",
+  },
 ] as const;
 
 export const FOOTER_COMPANY = [
@@ -25,16 +33,19 @@ export const FOOTER_SOCIAL = [
     href: "https://vk.ru/verix_certificate/",
     label: "ВКонтакте",
     icon: "vk" as const,
+    goal: ETargets.Vkontakte,
   },
   {
     href: "/go/telegram/",
     label: "Telegram",
     icon: "telegram" as const,
+    goal: ETargets.Telegram,
   },
   {
     href: "/go/whatsapp/",
     label: "WhatsApp",
     icon: "whatsapp" as const,
+    goal: ETargets.Whatsapp,
   },
 ];
 
