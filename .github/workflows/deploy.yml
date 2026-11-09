@@ -27,7 +27,7 @@ jobs:
         run: npm run build
         env:
           YANDEX_VERIFICATION: ${{ secrets.YANDEX_VERIFICATION }} 
-          YANDEX_METRICA_ID: ${{ secrets.YANDEX_METRICA_ID }} 
+          NEXT_PUBLIC_YANDEX_METRICA_ID: ${{ secrets.NEXT_PUBLIC_YANDEX_METRICA_ID }} 
 
       - name: 🚀 Деплой (Многопоточный lftp)
         run: |
